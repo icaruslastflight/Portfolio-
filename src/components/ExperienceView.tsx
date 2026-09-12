@@ -63,7 +63,7 @@ export const ExperienceView: React.FC<ExperienceViewProps> = ({
       <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-5 shadow-lg backdrop-blur-md">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-1">
+            <div className="flex flex-wrap items-center gap-2 mb-1">
               <span className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
                 <Briefcase className="w-5 h-5" />
               </span>
@@ -77,13 +77,12 @@ export const ExperienceView: React.FC<ExperienceViewProps> = ({
               Maintained separate from individual technical projects and case studies.
             </p>
           </div>
-
-          <div className="flex items-center gap-2 self-start md:self-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full md:w-auto self-start md:self-auto">
             {onOpenResumeImport && (
               <button
                 type="button"
                 onClick={onOpenResumeImport}
-                className="inline-flex items-center gap-2 px-3.5 py-2 bg-indigo-950/80 hover:bg-indigo-900 text-indigo-200 hover:text-white rounded-lg text-sm font-semibold border border-indigo-700/60 transition-all shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-3.5 py-2 bg-indigo-950/80 hover:bg-indigo-900 text-indigo-200 hover:text-white rounded-lg text-sm font-semibold border border-indigo-700/60 transition-all shadow-sm"
                 title="Import resume to auto-ingest experience and discern skills"
               >
                 <Sparkles className="w-4 h-4 text-indigo-400" />
@@ -92,7 +91,7 @@ export const ExperienceView: React.FC<ExperienceViewProps> = ({
             )}
             <button
               onClick={onAddExperience}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-semibold transition-all shadow-md shadow-indigo-600/20"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-sm font-semibold transition-all shadow-md shadow-indigo-600/20"
             >
               <Plus className="w-4 h-4" /> Add Experience
             </button>

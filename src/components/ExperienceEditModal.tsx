@@ -388,7 +388,7 @@ export const ExperienceEditModal: React.FC<ExperienceEditModalProps> = ({
               ))}
             </div>
 
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <input
                 type="text"
                 value={newMetricLabel}

@@ -127,7 +127,7 @@ export const SkillEditModal: React.FC<SkillEditModalProps> = ({
           </div>
 
           {/* Proficiency & Years */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1">Proficiency Tier</label>
               <select
@@ -345,7 +345,7 @@ export const SkillGroupModal: React.FC<SkillGroupModalProps> = ({
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-medium text-slate-400 mb-1">Highlight Metric Label</label>
               <input

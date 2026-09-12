@@ -81,7 +81,7 @@ export const JobEditModal: React.FC<JobEditModalProps> = ({
         </div>
 
         <div className="p-6 overflow-y-auto pane-scroll space-y-6">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-stone-400 uppercase tracking-wider">Job Title</label>
               <input
@@ -109,7 +109,7 @@ export const JobEditModal: React.FC<JobEditModalProps> = ({
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-stone-400 uppercase tracking-wider">Location</label>
               <div className="relative">
@@ -151,7 +151,7 @@ export const JobEditModal: React.FC<JobEditModalProps> = ({
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
              <div className="space-y-1.5">
               <label className="text-xs font-bold text-stone-400 uppercase tracking-wider">URL</label>
               <div className="relative">
@@ -197,7 +197,7 @@ export const JobEditModal: React.FC<JobEditModalProps> = ({
                <h3 className="text-sm font-bold text-stone-200">AI Match Context</h3>
              </div>
              
-             <div className="grid grid-cols-2 gap-4">
+             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-xs font-bold text-stone-400 uppercase tracking-wider">Match Score (0-100)</label>
                   <input

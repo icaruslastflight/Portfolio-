@@ -50,14 +50,14 @@ export const JobBoardView: React.FC<JobBoardViewProps> = ({
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-xl font-bold text-stone-100 tracking-tight">Intelligent Job Board</h2>
           <p className="text-sm text-stone-400">Match verified portfolio assets to touring & local positions.</p>
         </div>
         <button
           onClick={onAddJob}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold transition-all shadow-lg"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold transition-all shadow-lg"
         >
           <Plus className="w-4 h-4" />
           Add Position
@@ -65,13 +65,13 @@ export const JobBoardView: React.FC<JobBoardViewProps> = ({
       </div>
 
       {/* Filters & Search */}
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex items-center gap-2 bg-stone-900 border border-stone-800 p-1 rounded-lg">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+        <div className="flex flex-wrap items-center gap-1 sm:gap-2 bg-stone-900 border border-stone-800 p-1 rounded-lg">
           {(['all', 'local', 'international', 'touring', 'remote'] as const).map(type => (
             <button
               key={type}
               onClick={() => setFilterType(type)}
-              className={`px-3 py-1.5 text-xs font-semibold rounded-md capitalize transition-colors ${
+              className={`px-3 py-1.5 text-xs font-semibold rounded-md capitalize transition-colors flex-1 sm:flex-none text-center ${
                 filterType === type 
                   ? 'bg-stone-700 text-stone-100 shadow' 
                   : 'text-stone-400 hover:text-stone-200'
@@ -82,7 +82,7 @@ export const JobBoardView: React.FC<JobBoardViewProps> = ({
           ))}
         </div>
         
-        <div className="relative w-64">
+        <div className="relative w-full sm:w-64">
           <Search className="w-4 h-4 text-stone-500 absolute left-3 top-1/2 -translate-y-1/2" />
           <input
             type="text"
