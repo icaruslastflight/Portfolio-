@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-stone-900: #111111;
+  --color-stone-950: #0a0a0a;
+  --color-stone-800: #1a1a1a;
+  --color-stone-100: #f5f5f5;
+  --color-sky-500: #0284c7;
+  --color-sky-400: #38bdf8;
+}
+
+@layer base {
+  body {
+    @apply bg-stone-950 text-stone-100 antialiased selection:bg-sky-500/30 selection:text-sky-200;
+  }
+}
+
+/* Custom Scrollbar for sleek dashboard feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-800 rounded-full hover:bg-stone-700 transition-colors;
+}
+
+/* Dashboard Split Layout Utilities */
+.split-pane {
+  display: grid;
+  grid-template-columns: 260px 1fr 380px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pane-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.glass-panel {
+  @apply bg-stone-900/60 backdrop-blur-xl border-stone-800 border;
+}
