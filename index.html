@@ -1,40 +1,1115 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brice Anthony Morneau | Creative Technologist & Technical Director</title>
-    <meta name="description" content="Technical Portfolio & Production Architecture for Brice Morneau. Creative Technologist, Systems Architect & Lead Video Engineer.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #09090b; }
-        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 9999px; }
-        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
-        .glass-panel {
-            background: rgba(18, 18, 22, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glass-card {
-            background: rgba(24, 24, 29, 0.7);
-            backdrop-filter: blur(12px);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brice Anthony Morneau | Technical Director & Creative Designer</title>
+  <meta name="description" content="Portfolio of Brice Anthony Morneau — Technical Director & Creative Designer specializing in real-time GPU pipelines, physical computing, modular LED video processing, automated lighting, and large-scale architectural AV installations." />
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-surface: #0e121b;
+      --bg-surface-elevated: #141a27;
+      --border-subtle: #1c2436;
+      --border-accent: #2c3954;
+      
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --accent-cyan: #00f0ff;
+      --accent-magenta: #e024c3;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      
+      --glow-cyan: rgba(0, 240, 255, 0.25);
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 10%, rgba(0, 240, 255, 0.035) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(224, 36, 195, 0.03) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    }
+
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    a:hover {
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 9, 14, 0.88);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-title span.status-indicator {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-cyan);
+    }
+    .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+    }
+    .nav-links a:hover {
+      color: var(--accent-cyan);
+    }
+    .nav-cta {
+      padding: 8px 18px;
+      border-radius: 6px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid var(--accent-cyan);
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--accent-cyan);
+      color: #000;
+      box-shadow: 0 0 16px var(--glow-cyan);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 96px 0 64px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(28, 36, 54, 0.6);
+      border: 1px solid var(--border-accent);
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-cyan);
+      margin-bottom: 24px;
+    }
+    .hero-tag span.live-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--accent-emerald);
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      max-width: 980px;
+      color: #fff;
+    }
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 860px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .btn-primary {
+      padding: 13px 26px;
+      background: var(--accent-cyan);
+      color: #000;
+      font-weight: 700;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 20px var(--glow-cyan);
+      transition: all 0.2s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 28px rgba(0, 240, 255, 0.4);
+    }
+    .btn-secondary {
+      padding: 13px 26px;
+      background: var(--bg-surface);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      border: 1px solid var(--border-accent);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover {
+      background: var(--bg-surface-elevated);
+      border-color: var(--accent-cyan);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .section-header {
+      margin-bottom: 36px;
+    }
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .section-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+
+    /* Category Filter */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: rgba(0, 240, 255, 0.08);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    /* Case Studies Grid */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 28px;
+    }
+    .case-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    }
+    .case-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-accent);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+    }
+    .case-header {
+      padding: 24px 24px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .case-meta {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--accent-cyan);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .case-role-pill {
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      color: var(--accent-cyan);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.68rem;
+    }
+    .case-title {
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+    .case-loc {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    .case-body {
+      padding: 20px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .case-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .case-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .case-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 4px;
+      color: #94a3b8;
+    }
+    .case-footer {
+      padding: 14px 24px;
+      background: rgba(0, 0, 0, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .btn-view {
+      background: transparent;
+      border: 1px solid var(--border-accent);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-view:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      background: rgba(0, 240, 255, 0.05);
+    }
+
+    /* Technical Stack Grid */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+    }
+    .stack-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .stack-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .stack-title span.dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent-cyan);
+      border-radius: 50%;
+    }
+    .stack-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .stack-item {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .stack-item strong {
+      color: #e2e8f0;
+    }
+
+    /* Directorial History Timeline */
+    .history-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .history-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .history-role {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .history-venue {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent-cyan);
+    }
+    .history-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+    .history-body {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Single Clean Resume & Profile Section */
+    .profile-banner {
+      background: linear-gradient(145deg, rgba(20, 26, 39, 0.9), rgba(10, 14, 22, 0.9));
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .profile-banner h3 {
+      font-size: 1.4rem;
+      color: #fff;
+    }
+    .profile-banner p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .profile-banner-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    /* Modal / Lightbox */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 9, 14, 0.88);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      padding: 20px;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-window {
+      background: #0d111a;
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      max-width: 860px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px;
+      position: relative;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .modal-close-btn:hover {
+      color: #fff;
+    }
+    .asset-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 20px 0;
+    }
+    .asset-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+    }
+    .asset-type-badge {
+      background: rgba(0, 240, 255, 0.1);
+      color: var(--accent-cyan);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0;
+      background: #05070b;
+      font-size: 0.84rem;
+      color: var(--text-dim);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .cases-grid { grid-template-columns: 1fr; }
+      .stack-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-title">
+          <span class="status-indicator"></span> BRICE ANTHONY MORNEAU
+        </div>
+        <div class="brand-sub">Technical Director & Creative Designer</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#case-studies">Selected Projects</a></li>
+        <li><a href="#systems-stack">Technical Stack</a></li>
+        <li><a href="#production-history">Experience & History</a></li>
+        <li><a href="#credentials">Profile & Resume</a></li>
+      </ul>
+      <a href="mailto:events.bricem@gmail.com" class="nav-cta">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-tag">
+        <span class="live-dot"></span> PITTSBURGH LOCAL • AVAILABLE WORLDWIDE • 10+ YEARS FIELD SYSTEMS
+      </div>
+      <h1>Connecting Real-Time Software Directly to Physical Architecture.</h1>
+      <p class="hero-desc">
+        Specializing in GPU compute shaders (TouchDesigner, GLSL, 3D Gaussian Splatting), physical computing microcontrollers, modular LED video processing, Pangolin laser distribution, and high-reliability show control systems engineered for zero downtime under live pressure.
+      </p>
+      <div class="hero-actions">
+        <a href="#case-studies" class="btn-primary">View Case Studies &rarr;</a>
+        <a href="#credentials" class="btn-secondary">Technical Credentials</a>
+        <a href="mailto:events.bricem@gmail.com" class="btn-secondary">events.bricem@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Selected Portfolio Deployments</span>
+        <h2 class="section-title">Case Studies & Field Records</h2>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-bar" id="categoryFilter">
+        <button class="filter-btn active" data-category="all">All Case Studies</button>
+        <button class="filter-btn" data-category="cat_immersive_art">Immersive Art & AV</button>
+        <button class="filter-btn" data-category="cat_kinetic_fabrication">Kinetic & Fabrication</button>
+        <button class="filter-btn" data-category="cat_rd_visuals">R&D & Point Clouds</button>
+        <button class="filter-btn" data-category="cat_nightclubs_residencies">Superclubs & Residencies</button>
+        <button class="filter-btn" data-category="cat_concert_festivals">Concerts & Festivals</button>
+        <button class="filter-btn" data-category="cat_corporate_vip">Corporate Activations</button>
+      </div>
+
+      <!-- Case Grid -->
+      <div class="cases-grid" id="caseStudiesGrid">
+        <!-- Rendered via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stack Section -->
+  <section id="systems-stack">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Core Technical Competencies</span>
+        <h2 class="section-title">Systems Architecture & Hardware Stack</h2>
+      </div>
+
+      <div class="stack-grid">
+        <!-- Video & Media Servers -->
+        <div class="stack-card">
+          <h3 class="stack-title"><span class="dot"></span> Video Engineering & Media Servers</h3>
+          <ul class="stack-list">
+            <li class="stack-item"><strong>Resolume Arena 7:</strong> Advanced output canvas slice routing, DMX Lumiverse mapping, SMPTE LTC timecode, and DXV 3 transcoding pipelines.</li>
+            <li class="stack-item"><strong>TouchDesigner & GLSL:</strong> Generative pipelines, compute shaders, spatial point clouds, audio-reactive modulation, and sensor integration.</li>
+            <li class="stack-item"><strong>MadMapper:</strong> Multi-display projection warping, 3D surface mapping, and low-voltage addressable LED pixel tape arrays.</li>
+            <li class="stack-item"><strong>Baseband Video:</strong> Blackmagic ATEM Constellation 8K, 12G-SDI baseband matrices, Decimator MD-HX, opticalCON fiber, and Genlock sync.</li>
+          </ul>
+        </div>
+
+        <!-- LED Processing & Electronics -->
+        <div class="stack-card">
+          <h3 class="stack-title"><span class="dot"></span> Modular LED & Component Bench Repair</h3>
+          <ul class="stack-list">
+            <li class="stack-item"><strong>Processors:</strong> Brompton Technology (Tessera SX40, S8), NovaStar (MX40 Pro, MCTRL4K, NovaLCT), and EDID handshake management.</li>
+            <li class="stack-item"><strong>Tile Rigging:</strong> ROE Visual (Carbon, Vanish), Absen, and Infiled touring panels, curving hardware, and ground support outriggers.</li>
+            <li class="stack-item"><strong>Bench-Level Servicing:</strong> Power Supply Unit (PSU) diagnosis, capacitor discharge safety, micro-soldering, and PWM switching repair.</li>
+            <li class="stack-item"><strong>Receiving Cards:</strong> Firmware unbricking, EEPROM recovery, and ribbon interconnect troubleshooting under show conditions.</li>
+          </ul>
+        </div>
+
+        <!-- Lighting, Lasers & Power -->
+        <div class="stack-card">
+          <h3 class="stack-title"><span class="dot"></span> Concert Lighting, Lasers & Power</h3>
+          <ul class="stack-list">
+            <li class="stack-item"><strong>Lighting Consoles:</strong> ChamSys MagicQ, Obsidian ONYX, and GrandMA onPC with ~100 hours hands-on programming and live music busking.</li>
+            <li class="stack-item"><strong>Laser Systems:</strong> Pangolin BEYOND, QuickShow, FB4 network topology, beam attenuation masks, and series NC E-stop loops under company LSO.</li>
+            <li class="stack-item"><strong>Tri-Computer Control:</strong> Custom bidirectional MIDI/OSC Akai APC40 architecture driving lighting, Resolume video, and lasers simultaneously.</li>
+            <li class="stack-item"><strong>3-Phase Power:</strong> 100A–400A Cam-Lock distribution, leg phase balancing, neutral protection, GFCI compliance, and sequential power-up.</li>
+          </ul>
+        </div>
+
+        <!-- Rigging, CAD & Scenic Fabrication -->
+        <div class="stack-card">
+          <h3 class="stack-title"><span class="dot"></span> Scenic Engineering, Staging & Rigging</h3>
+          <ul class="stack-list">
+            <li class="stack-item"><strong>3D Volumetric CAD:</strong> Vectorworks Spotlight 3D modeling, sightline evaluations, and stamped truss load calculations.</li>
+            <li class="stack-item"><strong>Truss & Hoists:</strong> Global Truss F34, CM Lodestar electric chain hoists, dead-hangs, spansets, beam clamps, and kinetic winches.</li>
+            <li class="stack-item"><strong>Scenic Joinery:</strong> Structural timber post-and-beam construction, StageRight modular staging, and seamless projection flats.</li>
+            <li class="stack-item"><strong>Heavy Machinery:</strong> Extensive practical MEWP operation (rough-terrain boom lifts, electric scissor lifts, industrial forklifts).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Production History Section -->
+  <section id="production-history">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Field Leadership History</span>
+        <h2 class="section-title">Directorial & Systems Roles</h2>
+      </div>
+
+      <div class="history-card">
+        <div class="history-head">
+          <div>
+            <div class="history-role">Technical Director & Department Head (Video & Lighting)</div>
+            <div class="history-venue">Republic Club Pattaya (DJ Mag Top 100) — Pattaya, Thailand</div>
+          </div>
+          <span class="history-date">2024 – 2025</span>
+        </div>
+        <p class="history-body">
+          Directed technical production for an international superclub operating 7 nights per week. Managed 16 curved LED video walls, 50+ automated moving fixtures, Pangolin FB4 lasers, and the motorized kinetic ceiling hoist (The Cube). Standardized venue video playback to DXV 3 codecs locking 60 FPS multi-layer output, authored departmental SOPs, and performed bench-level PSU repairs to achieve 0% show downtime.
+        </p>
+      </div>
+
+      <div class="history-card">
+        <div class="history-head">
+          <div>
+            <div class="history-role">Site Lead & Lead Systems Director</div>
+            <div class="history-venue">Immersive Van Gogh Exhibition — Pittsburgh, PA</div>
+          </div>
+          <span class="history-date">2021 – 2022</span>
+        </div>
+        <p class="history-body">
+          Directed a 32-technician stage crew through physical rigging, networking, convergence, and calibration of 64 edge-blended Christie Digital laser projectors across 32,000 sq ft. Managed media server racks, geometric corner-pin warping, and daily optical alignment over 14 continuous daily run-hours.
+        </p>
+      </div>
+
+      <div class="history-card">
+        <div class="history-head">
+          <div>
+            <div class="history-role">Audiovisual Stage Specialist (L1 / A2)</div>
+            <div class="history-venue">Red Bull Racing — Formula 1 Miami Grand Prix — Miami, FL</div>
+          </div>
+          <span class="history-date">May 2022</span>
+        </div>
+        <p class="history-body">
+          Managed stage signal distribution, confidence monitors, and 14 channels of Shure Axient Digital RF wireless microphones amid intense paddock electromagnetic interference. Operated rough-terrain boom lifts and industrial forklifts across active sporting paddock zones with zero delays.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile & Resume Section -->
+  <section id="credentials">
+    <div class="container">
+      <div class="profile-banner">
+        <div>
+          <span class="section-label">Professional Credentials</span>
+          <h3>Brice Anthony Morneau — Technical Director & Creative Designer</h3>
+        </div>
+        <p>
+          Pittsburgh-based Technical Director and Creative Designer with over a decade of hands-on experience designing, building, and deploying interactive physical-digital environments, spatial computing pipelines, and real-time visual installations. Expert in uniting software logic with structural scenic engineering across live concerts, touring festivals, and permanent experiential venues.
+        </p>
+        <div class="profile-banner-actions">
+          <a href="mailto:events.bricem@gmail.com?subject=Resume%20Inquiry%20-%20Brice%20Morneau" class="btn-primary">Request Complete PDF Resume Package</a>
+          <a href="tel:4123767138" class="btn-secondary">&#9742; Call: (412) 376-7138</a>
+          <a href="https://github.com/bricemorneau" target="_blank" rel="noopener" class="btn-secondary">GitHub Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modalClose">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>BRICE ANTHONY MORNEAU</strong> &bull; Technical Director & Creative Designer &bull; Pittsburgh, PA 15204 &bull; Hub: PIT
+      </div>
+      <div>
+        <a href="mailto:events.bricem@gmail.com">events.bricem@gmail.com</a> | (412) 376-7138
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script: Projects & Ordered Assets Engine -->
+  <script>
+    const caseStudies = [
+      {
+        id: "case-01-xperience",
+        index: "01",
+        title: "TheXperience: Botanical Immersive Night-Park",
+        location: "Koh Samui, Thailand",
+        role: "Lead Projection Mapping & Lighting Concepts Designer",
+        category: "cat_immersive_art",
+        date: "2024",
+        summary: "Engineered optical throw calculations and technical blueprints for a 1.2km botanical night-park: 3D statue projection mapping (Luna, Embrace, Ticha) using 5k–10k lumen laser engines, TouchDesigner sensor-driven interactive forest pathways, and synchronized DMX flame pyrotechnics over weatherized fiber links.",
+        fullDesc: `Technical execution and systems architecture across rugged tropical terrain:
+• 3D Statue Projection Mapping: Designed projection geometry and optical throw calculations for 3D statues (Luna, Embrace, and Ticha) using 5,000–10,000 lumen laser projectors with motorized lens shift and custom corner-pin warping.
+• Interactive Sensor-Driven Forest: Engineered a visitor-responsive LED forest network using TouchDesigner and low-voltage controllers, triggering cascading ambient illumination as visitors navigate pathways.
+• Synchronized Atmospherics & Pyrotechnics: Coordinated DMX flame poofers, high-output fog/mist systems, and synchronized spires pyrotechnics integrated into a cohesive show control timeline.
+• Outdoor Infrastructure: Planned weatherized fiber-optic distribution trunks and outdoor enclosures linking distributed field projection towers back to centralized server racks.`,
+        tags: ["3D Statue Mapping", "TouchDesigner Sensors", "Weatherized Fiber", "DMX Pyrotechnics"],
+        orderedAssets: [
+          { name: "Luna Goddess Statue Projection Mapping (Night)", type: "Photo Record" },
+          { name: "Luna Goddess Monolithic Statue (Daylight Architecture)", type: "Photo Record" },
+          { name: "Interactive Botanical Labyrinth Pathway (LED Forest)", type: "Photo Record" },
+          { name: "Monumental Conical Spires with Flame FX (Night)", type: "Photo Record" },
+          { name: "Monumental Spires Alignment & Site Aerial (Day)", type: "Photo Record" },
+          { name: "Lighting Concept at The Xperience (Master Blueprint PDF)", type: "Presentation Slide" },
+          { name: "Interactive Studio Projection Mapping Walkthrough (proposal.mp4)", type: "Video Demo" }
+        ]
+      },
+      {
+        id: "case-02-artechouse",
+        index: "02",
+        title: "Artechouse Miami: Magentaverse",
+        location: "Miami, FL",
+        role: "Lead Scenic Carpenter & LED Technician",
+        category: "cat_immersive_art",
+        date: "2022",
+        summary: "Constructed museum-grade structural timber joinery, false staging, and concealed wire chases to house interactive LED arrays. Calibrated multi-surface projection throws across curved architectural walls receiving real-time generative TouchDesigner visual feeds.",
+        fullDesc: `Collaborated with Artechouse on physical staging, structural timber fabrication, and optical alignment for the flagship Magentaverse interactive exhibition:
+• Custom Structural Framing: Fabricated museum-grade timber and aluminum wall assemblies, projection flats, and false staging designed to withstand high-volume public interaction.
+• Interactive LED Arrays: Wired, addressed, and tested responsive multi-channel LED arrays running real-time generative TouchDesigner visual feeds, concealing high-voltage power lines and low-voltage signal runs within hidden framing chases.
+• Optical & Surface Integration: Aligned projection throws across curved and corner architectural surfaces, ensuring seamless color temperature and luminance balance.`,
+        tags: ["Architectural Timber Framing", "Concealed Wire Chases", "Interactive LED", "TouchDesigner"],
+        orderedAssets: [
+          { name: "Interactive Flower Projection & Optical Alignment", type: "Photo Record" },
+          { name: "Curved False Wall Framing & Wire Chases", type: "Fabrication Record" },
+          { name: "Interactive LED Arched Tunnel with Mirror Floor", type: "Photo Record" },
+          { name: "CRT Video Monitor Stack & Vertical LED Array", type: "Photo Record" },
+          { name: "Geometric Pink LED Tube Installation Room", type: "Photo Record" }
+        ]
+      },
+      {
+        id: "case-03-story-portal",
+        index: "03",
+        title: "Story Portal: Steampunk Interactive Mechanical Stage",
+        location: "Interactive Festival Stage",
+        role: "Lead Hardware Fabricator & Systems Engineer",
+        category: "cat_kinetic_fabrication",
+        date: "2023",
+        summary: "Fabricated a heavy-duty mechanical gear reduction wheel integrated with optical rotary encoders. Participant turning sequences microcontroller relays firing timed DMX flame poofers, spinning kinetic scenic pieces, stage haze, and lighting sweeps protected by manual E-stops.",
+        fullDesc: `Designed, welded, framed, and engineered an interactive mechanical stage centerpiece prompting participant storytelling:
+• Motorized Wheel Mechanism: Fabricated a heavy-duty mechanical wheel reduction mechanism integrated with optical rotary encoders. Participant turning inputs drive an analog-to-digital sensor signal.
+• Microcontroller Relay Logic: Engineered a centralized controller sequencing timed DMX flame poofers, spinning kinetic set elements, high-output stage haze, and multi-parameter lighting sweeps upon cycle completion.
+• Structural Integrity & Safety: Built heavy-duty timber and steel base ballast frames, verified grounding, and implemented manual emergency kill-switches (E-stop) for active flame effects.`,
+        tags: ["Gear Reductions", "Rotary Encoders", "Microcontroller Relays", "DMX Flame FX"],
+        orderedAssets: [
+          { name: "Steampunk Gearbox & Arch Structure 3D CAD Render", type: "3D CAD Blueprint" },
+          { name: "Mechanical Reduction Wheel & Encoder Build", type: "Fabrication Photo" },
+          { name: "Participant Interaction on Beach Stage at Night", type: "Photo Record" },
+          { name: "Live Show Firing Timed DMX Flame Poofers", type: "Photo Record" },
+          { name: "Kinetic Mechanism Bench Testing Video", type: "Video Demo" }
+        ]
+      },
+      {
+        id: "case-04-gaussian-splats",
+        index: "04",
+        title: "Procedural Generation: 3D Gaussian Splats & Point Clouds",
+        location: "Live Concert R&D (`creative`)",
+        role: "Interactive Visuals & GPU Shader Developer",
+        category: "cat_rd_visuals",
+        date: "2025",
+        summary: "Real-time generative visual systems executing TouchDesigner GLSL compute shaders. Modulates LiDAR point clouds in response to audio frequencies and OSC control, with live 60 FPS ingest of 3D Gaussian Splats delivering fluid volumetric flight manipulation.",
+        fullDesc: `Engineered advanced real-time generative visual systems utilizing spatial point clouds, 3D Gaussian Splatting, and custom GLSL shaders for responsive live concert environments:
+• Volumetric Point Cloud Shaders: Built custom GLSL compute shaders in TouchDesigner displacing millions of spatial LiDAR data points in response to live incoming audio frequencies and OSC control commands.
+• Gaussian Splatting Ingest: Implemented real-time rendering pipelines for 3D Gaussian Splats, delivering fluid, photo-realistic spatial environment manipulation at 60 FPS under live concert rendering loads.
+• Interactive Feedback Loops: Connected optical tracking and sensor data into procedural particle networks, turning live performer movement into dynamic visual geometry.`,
+        tags: ["TouchDesigner", "GLSL Compute Shaders", "3D Gaussian Splats", "LiDAR Point Clouds"],
+        orderedAssets: [
+          { name: "creative: TouchDesigner Audio-Displaced Point Cloud Compute Network", type: "Video Capture" },
+          { name: "creative: Volumetric Point Cloud Flythrough & Spatial Dispersion", type: "Video Capture" },
+          { name: "creative: 3D Gaussian Splatting Environment Rendering at 60 FPS", type: "Video Capture" },
+          { name: "creative: Live Concert Stage Point Cloud Projection & Tracking", type: "Video Capture" }
+        ]
+      },
+      {
+        id: "case-05-republic-club",
+        index: "05",
+        title: "Republic Club Pattaya: AV Architecture & Show Control",
+        location: "Pattaya, Thailand",
+        role: "Technical Director & Department Head (Video & Lighting)",
+        category: "cat_nightclubs_residencies",
+        date: "2024 – 2025",
+        summary: "Commanded end-to-end technical production for an international DJ Mag Top 100 venue operating 7 nights a week, directing 16 curved LED video walls, 50+ automated moving heads, Pangolin lasers, and a motorized kinetic ceiling hoist (The Cube). Standardized venue-wide Resolume DXV3 codecs and authored SOPs for component-level PSU bench repairs.",
+        fullDesc: `Directed end-to-end technical production, systems engineering, and preventative maintenance:
+• Resolume Arena DXV 3 Optimization: Converted the entire venue content library using Resolume Alley to DXV 3 Normal Quality codecs with uncompressed 48kHz audio, locking multi-layer 60 FPS playback across 16 independent LED walls.
+• Bench-Level PSU Soldering & Electronics Repair: Authored and institutionalized venue-wide SOPs for diagnosing and rebuilding switching Power Supply Units (PSUs), performing capacitor discharge, polarity testing, and soldering to eliminate panel failures.
+• Lighting & Show Control: Programmed multi-universe show files across GrandMA onPC and ChamSys MagicQ. Operated the centralized kinetic ceiling structure (The Cube) and enforced strict Lock-Out/Tag-Out (LOTO) protocols following winch events.
+• Bilingual Team Leadership: Managed and trained a cross-functional stage crew of Thai, Burmese, and international technicians using structured visual signal flow diagrams and bilingual checklists.`,
+        tags: ["16 Curved LED Walls", "Resolume Arena 7", "Kinetic Ceiling Hoist", "PSU Bench Soldering"],
+        orderedAssets: [
+          { name: "Republic Resolume Advanced Output & Screen Matrix Control", type: "Control Interface" },
+          { name: "FOH Production Booth Live DJ Busking & Slice Routing", type: "Video Capture" },
+          { name: "Live Headline DJ Set with Crowd, Lasers, Dancers & Cold Sparks", type: "Video Capture" },
+          { name: "Overhead Kinetic Ceiling Rig (The Cube) & Moving Light Canopy", type: "Video Capture" }
+        ]
+      },
+      {
+        id: "case-06-home-bass",
+        index: "06",
+        title: "Home Bass Stage: Experiential Rigging & 3D Pre-Vis",
+        location: "Orlando, FL",
+        role: "Lead Staging Designer & Technical Rigging Specialist",
+        category: "cat_concert_festivals",
+        date: "2023",
+        summary: "Engineered and directed the structural rigging for an immersive 270° wrap-around poolside festival stage. Modeled 3D Vectorworks pre-vis and calculated load schedules across Global Truss F34 box truss (1,121 lbs truss weight, 876.7 lbs fixtures) with ground-support outriggers.",
+        fullDesc: `Engineered structural rigging for an immersive 270° wrap-around poolside festival stage:
+• Volumetric CAD Modeling: Drafted full 3D pre-visualization models in Vectorworks to evaluate cantilever angles, audience clearance, and sightlines.
+• Structural Load & Weight Distribution: Calculated dead-weight and dynamic load ratings across Global Truss F34 rectangular sections (1,121 lbs total truss weight) supporting an 876.7 lb fixture package (18x Clay Paky Sharpy, 10x Martin MAC Aura, opto-splitters, and power distribution).
+• Safe Assembly & Height Operations: Directed ground-support tower erection, baseplate ballasting, overhead bridle connections, and harnessed work at height.`,
+        tags: ["270° Wrap Rigging", "Global Truss F34", "Vectorworks Spotlight", "Load Schedules"],
+        orderedAssets: [
+          { name: "Vectorworks 3D Pre-Vis CAD Model (270° Poolside Wrap)", type: "CAD Blueprint" },
+          { name: "Stamped Equipment Report & Load Distribution Schedule", type: "Engineering Spec" },
+          { name: "Live Poolside Stage Build ('Corporate Wooks' Mainstage)", type: "Photo Record" }
+        ]
+      },
+      {
+        id: "case-07-hijinx",
+        index: "07",
+        title: "HiJinx Stage: Space Optimization & Volumetric CAD",
+        location: "Philadelphia, PA",
+        role: "Stage Systems & Volumetric CAD Specialist",
+        category: "cat_concert_festivals",
+        date: "2023",
+        summary: "Addressed severe industrial warehouse constraints—including dense load-bearing concrete structural columns—by utilizing volumetric CAD modeling to turn physical obstructions into architectural staging assets.",
+        fullDesc: `Volumetric space drafting and architectural integration in an industrial warehouse setting:
+• Volumetric Clearance Modeling: Mapped precise vertical trim heights, 3D sightline cones, and beam clearance paths to ensure full visual impact across all spectator positions.
+• Structural Wrapping: Integrated truss wraps around structural columns, anchoring fixture arrays that transformed venue pillars into dynamic lighting frames.
+• Atmospheric Flow: Positioned high-output hazers and directional fans to maintain uniform light beam dispersion without creating dense fog pockets around industrial obstacles.`,
+        tags: ["Volumetric CAD", "Sightline Drafting", "Column Obstruction Clamping", "Haze Dispersion"],
+        orderedAssets: [
+          { name: "HiJinx Warehouse 3D CAD Wireframe (Pillars & Trussing)", type: "CAD Wireframe" },
+          { name: "Live Warehouse Beams, Symmetrical Fans & Dense Atmospheric Haze", type: "Photo Record" }
+        ]
+      },
+      {
+        id: "case-08-gecko",
+        index: "08",
+        title: "Gecko Robotics: Corporate Tech Activation",
+        location: "Pittsburgh, PA",
+        role: "Lead Automation & LED Installation Engineer",
+        category: "cat_corporate_vip",
+        date: "2024",
+        summary: "Turnkey execution of a corporate technology activation featuring a mechanized kinetic LED canopy and a heavy-duty infinity-mirror dance floor constructed from load-bearing one-way tempered acrylics.",
+        fullDesc: `Engineered an experiential corporate technology activation directly from 3D CAD concept to physical installation:
+• Kinetic Canopy Automation: Programmed DMX winch positional arrays to smoothly raise and lower lighting shapes above guests, synchronized to ambient event states.
+• Infinity-Mirror Dance Floor: Built reinforced structural sub-floor framing, integrated low-voltage addressable LED pixel runs, and installed heavy-duty load-bearing one-way tempered acrylics.
+• 3D Schematic to Build: Successfully translated 3D CAD conceptual designs directly into working physical hardware under tight venue load-in deadlines.`,
+        tags: ["Kinetic DMX Winches", "Infinity Mirror Floor", "Tempered Acrylic", "CAD to Build"],
+        orderedAssets: [
+          { name: "Kinetic LED Canopy 3D Concept Schematic Render", type: "3D CAD Schematic" },
+          { name: "Reinforced Sub-Floor Framing & Addressable LED Pixel Array", type: "Fabrication Photo" },
+          { name: "Live Corporate Activation: Infinity Floor & Flown Kinetic Canopy", type: "Photo Record" }
+        ]
+      },
+      {
+        id: "case-09-underground",
+        index: "09",
+        title: "Underground Rigs: Tri-Computer Busking & FB4 Lasers",
+        location: "Concert Tours & Festivals",
+        role: "Lighting Director, Live Busker & Laser Tech",
+        category: "cat_concert_festivals",
+        date: "2024",
+        summary: "High-tempo console busking and FB4 laser rigging for headline bass acts (Ternion Sound, Buku). Engineered a unified FOH control map routing bidirectional MIDI/OSC from a single Akai APC40 across three networked computers controlling ChamSys, Resolume, and Pangolin BEYOND.",
+        fullDesc: `Live concert busking and multi-system show control engineering:
+• Unlicensed Laser Technician & Operator: Rigged and aligned high-output RGB lasers via Pangolin FB4 network hardware; verified series emergency stop (E-stop) loops, dual key-switch arming sequences, and audience-scanning safety boundaries under company LSO supervision.
+• Tri-Computer Unified FOH Map: Engineered a custom show control architecture routing bidirectional MIDI and OSC from a single Akai APC40 controller across three networked computers—triggering lighting overrides (ChamSys/ONYX), media server video clips (Resolume), and laser cues (Pangolin BEYOND) simultaneously.
+• Concert Busking Depth: Built comprehensive punt pages featuring dynamic color palettes, intensity bumps, position sweeps, and strobe overrides responsive to unscripted DJ performances.`,
+        tags: ["Pangolin BEYOND / FB4", "Akai APC40 Tri-Computer", "ChamSys / ONYX", "Concert Busking"],
+        orderedAssets: [
+          { name: "High-Output Laser Geometric Grid (Shanghai Doom Performance)", type: "Photo Record" },
+          { name: "Ternion Sound Live Headline Concert Visual & Lighting Sync", type: "Photo Record" },
+          { name: "Buku Live Headline Concert LD Busking & Strobe Overrides", type: "Photo Record" },
+          { name: "Radial LED Bar Circular Truss Array Bench Build", type: "Fabrication Photo" },
+          { name: "Brice Morneau with Radial Circular Truss Fixture", type: "Field Portrait" }
+        ]
+      },
+      {
+        id: "case-10-bespoke",
+        index: "10",
+        title: "Custom Fabrication & Bespoke Studio Installations",
+        location: "Commercial Builds (`setdesign`)",
+        role: "Lead Carpenter & Systems Fabricator",
+        category: "cat_kinetic_fabrication",
+        date: "2023",
+        summary: "Handcrafted architectural AV installations: free-standing modular rustic timber pergola bars with concealed power channels, real-time sound-reactive projection-mapped commercial studio murals, and mechanical kinetic staging prototypes.",
+        fullDesc: `Crafted high-precision physical architecture, bespoke staging, and interactive AV hardware:
+• Modular Rustic Timber Pergola Bar: Built a free-standing heavy timber pergola bar featuring modular joinery, integrated electrical power distribution, concealed lighting channels, and weather-resistant finish carpentry.
+• Sound-Reactive Commercial Studio Mural: Designed and installed real-time projection-mapped architectural murals for commercial recording studios, integrating acoustic paneling with generative visuals.
+• Mechanical Hardware Prototyping: Built and bench-tested kinetic staging prototypes, verifying load limits, motor torque, and structural joinery.`,
+        tags: ["setdesign", "Modular Timber Joinery", "Concealed Channels", "Studio Projection"],
+        orderedAssets: [
+          { name: "setdesign: Modular Rustic Timber Pergola Bar on Field Site", type: "Fabrication Photo" },
+          { name: "setdesign: Hand-Drawn Mandala Ceiling & Wall Mural", type: "Art Installation" },
+          { name: "setdesign: Sound-Reactive Commercial Studio Projection Mapping", type: "Video Capture" },
+          { name: "setdesign: Mechanical Staging Joinery & Modular Deck Assembly", type: "Video Capture" }
+        ]
+      }
+    ];
+
+    const caseGrid = document.getElementById("caseStudiesGrid");
+
+    function renderCases(category = "all") {
+      caseGrid.innerHTML = "";
+      const filtered = category === "all" 
+        ? caseStudies 
+        : caseStudies.filter(c => c.category === category);
+
+      filtered.forEach(c => {
+        const card = document.createElement("div");
+        card.className = "case-card";
+        card.innerHTML = `
+          <div class="case-header">
+            <div class="case-meta">
+              <span>// ${c.index} &bull; ${c.date}</span>
+              <span class="case-role-pill">${c.role}</span>
+            </div>
+            <h3 class="case-title">${c.title}</h3>
+            <div class="case-loc">&#128205; ${c.location}</div>
+          </div>
+          <div class="case-body">
+            <p class="case-desc">${c.summary}</p>
+            <div class="case-tags">
+              ${c.tags.map(t => `<span class="case-tag">${t}</span>`).join('')}
+            </div>
+          </div>
+          <div class="case-footer">
+            <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-dim);">${c.orderedAssets.length} Ordered Assets</span>
+            <button class="btn-view" onclick="openModal('${c.id}')">View Case & Media &rarr;</button>
+          </div>
+        `;
+        caseGrid.appendChild(card);
+      });
+    }
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderCases(btn.dataset.category);
+      });
+    });
+
+    const projectModal = document.getElementById("projectModal");
+    const modalContent = document.getElementById("modalContent");
+    const modalClose = document.getElementById("modalClose");
+
+    function openModal(id) {
+      const c = caseStudies.find(item => item.id === id);
+      if (!c) return;
+
+      modalContent.innerHTML = `
+        <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-cyan); margin-bottom: 6px;">
+          // CASE STUDY ${c.index} &bull; ${c.date} &bull; ${c.location}
+        </div>
+        <h2 style="font-size: 1.6rem; color: #fff; margin-bottom: 6px;">${c.title}</h2>
+        <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">
+          Role: <strong style="color: #fff;">${c.role}</strong>
+        </div>
+
+        <div style="font-size: 0.92rem; color: #cbd5e1; line-height: 1.7; white-space: pre-line; margin-bottom: 24px;">
+          ${c.fullDesc}
+        </div>
+
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+          <h4 style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 12px;">
+            Sequential Case Media & Documentation:
+          </h4>
+          <div class="asset-list">
+            ${c.orderedAssets.map((asset, idx) => `
+              <div class="asset-item">
+                <span style="color: var(--text-dim); min-width: 24px;">${idx + 1}.</span>
+                <span class="asset-type-badge">${asset.type}</span>
+                <span style="color: #e2e8f0; flex: 1;">${asset.name}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px;">
+          ${c.tags.map(t => `<span class="case-tag" style="background: rgba(0,240,255,0.06); border-color: var(--accent-cyan); color: var(--accent-cyan);">${t}</span>`).join('')}
+        </div>
+      `;
+
+      projectModal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    modalClose.addEventListener("click", () => {
+      projectModal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    });
+
+    projectModal.addEventListener("click", (e) => {
+      if (e.target === projectModal) {
+        projectModal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+    });
+
+    renderCases("all");
+  </script>
+</body>
+</html>            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.06);
             transition: all 0.25s ease-out;
         }
