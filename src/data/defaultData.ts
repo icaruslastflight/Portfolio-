@@ -810,7 +810,7 @@ export const DEFAULT_EXPORT_DECK: ExportDeck = {
   name: 'Primordial Video — Case Studies & Technical Portfolio',
   targetType: 'primordial_html',
   layout: 'primordial_dark',
-  assetPathStrategy: 'relative',
+  assetPathStrategy: 'assets_folder',
   itemIds: [
     'case-01-xperience',
     'case-02-artechouse',

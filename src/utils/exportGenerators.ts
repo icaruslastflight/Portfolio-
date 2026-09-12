@@ -13,7 +13,7 @@ export function resolveAssetUrl(
   filename?: string,
   directUrl?: string,
   assetRegistry?: Record<string, string>,
-  strategy: 'relative' | 'assets_folder' | 'netlify_live' | 'embedded' = 'relative'
+  strategy: 'relative' | 'assets_folder' | 'netlify_live' | 'embedded' = 'assets_folder'
 ): string {
   if (filename && assetRegistry && assetRegistry[filename]) {
     return assetRegistry[filename];
