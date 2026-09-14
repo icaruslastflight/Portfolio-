@@ -22,9 +22,7 @@ const INITIAL_PROJECTS = [
     summary: "Directed FOH lighting, laser systems, and media server architecture. Managed multi-axis kinetic ceiling hoists and locked 60 FPS DXV3 playback across 44 LED zones.",
     official_links: [
       { label: "Official Club Site & Gallery", url: "https://republic-nightclub.com/", badge: "Official Site" },
-      { label: "EDM Addicts Profile & Top 100 Rank", url: "https://edm-addicts.com/club/republic-club-lounge", badge: "Press Feature" },
-      { label: "Go To Pattaya Venue Guide", url: "https://www.gotopattaya.com/en/venues/republic-club-pattaya", badge: "City Guide" },
-      { label: "Wanderlog Review & Party Profile", url: "https://wanderlog.com/place/details/1819232/republic-club-pattaya", badge: "Venue Review" }
+      { label: "EDM Addicts Profile & Top 100 Rank", url: "https://edm-addicts.com/club/republic-club-lounge", badge: "Press Feature" }
     ],
     assets: [
       { id: "asset-rep-1", name: "Republic Club - Pattaya Video Reel", type: "video", isPrimary: true, url: "https://youtu.be/wlw7MD1ZvoE" },
@@ -47,7 +45,6 @@ const INITIAL_PROJECTS = [
     ],
     summary: "Led 32-technician crew in optical throw alignment, pipe grid rigging, and video distribution across a 32,000 sq ft immersive 360° visual canvas.",
     official_links: [
-      { label: "CBS Pittsburgh KDKA Exhibition Feature", url: "https://pittsburgh.cbslocal.com/", badge: "Broadcast News" },
       { label: "Lighthouse Immersive Exhibition Portal", url: "https://www.immersivevangogh.com/", badge: "Exhibition Portal" }
     ],
     assets: [
@@ -69,8 +66,6 @@ const INITIAL_PROJECTS = [
     ],
     summary: "Designed 3D sculpture projection mapping onto Nathan Hooper statues paired with a TouchDesigner sensor-driven interactive forest network and DMX pyrotechnics.",
     official_links: [
-      { label: "Megatix Thailand Immersive Events", url: "https://megatix.in.th/", badge: "Ticketing Platform" },
-      { label: "Wonderfruit Festival Participation Portal", url: "https://wonderfruit.co/", badge: "Cultural Festival" }
     ],
     assets: [
       { id: "asset-xp-1", name: "TheXperience2-night (Luna Statue)", type: "image", isPrimary: true, url: "/media/TheXperience2-night.jpg" },
@@ -92,7 +87,6 @@ const INITIAL_PROJECTS = [
     ],
     summary: "Fabricated participant-spun mechanical gear-reduction wheel with optical encoders linked to microcontroller relays sequencing DMX flame poofers.",
     official_links: [
-      { label: "Love Burn Community Reddit Archive", url: "https://www.reddit.com/r/Loveburn/comments/1p10ug9/love_burn_2026_discounted_art_sponsor_tickets_to/", badge: "Community Archive" }
     ],
     assets: [
       { id: "asset-sp-1", name: "Stage1-Storyportal1-action (Flame Poofer)", type: "image", isPrimary: true, url: "/media/Stage1-Storyportal1-action.jpg" },
@@ -135,7 +129,6 @@ const INITIAL_PROJECTS = [
     ],
     summary: "Developed Vectorworks Spotlight 3D pre-vis for 270° wrap stage geometry, truss load distribution, and warehouse column obstruction wrapping.",
     official_links: [
-      { label: "Interactive & Immersive Staging Jobs", url: "https://jobs.interactiveimmersive.io/", badge: "Industry Portal" }
     ],
     assets: [
       { id: "asset-hb-1", name: "Stage5-Homebass2-night (270° Stage)", type: "image", isPrimary: true, url: "/media/Stage5-Homebass2-night.jpg" },
@@ -155,7 +148,6 @@ const INITIAL_PROJECTS = [
     ],
     summary: "Developed GPU compute pipelines rendering 3D Gaussian Splats and LiDAR point cloud displacement at 60 FPS in TouchDesigner GLSL.",
     official_links: [
-      { label: "Brice Morneau GitHub Repository", url: "https://github.com/icaruslastflight/my-portfolio", badge: "GitHub Source" }
     ],
     assets: [
       { id: "asset-gs-1", name: "Underground3 (FB4 Laser Geometry)", type: "image", isPrimary: true, url: "/media/Underground3.jpg" },
@@ -176,7 +168,6 @@ const INITIAL_PROJECTS = [
     ],
     summary: "Fabricated modular timber joinery, free-standing pergola bars with concealed power, and sound-reactive studio projection mapping.",
     official_links: [
-      { label: "Sitara Experiential Design Index", url: "https://sitara.systems/experiential-design-index/", badge: "Industry Index" }
     ],
     assets: [
       { id: "asset-bb-1", name: "Setdesign5-Wedding bar.jpg", type: "image", isPrimary: true, url: "/media/Setdesign5-Wedding-bar.jpg" },
