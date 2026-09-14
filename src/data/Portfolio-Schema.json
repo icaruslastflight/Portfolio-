@@ -1,0 +1,549 @@
+{
+  "version": "7.0",
+  "updated": "2026-09-13",
+  "unassigned_assets": [
+    {
+      "id": "media-extra-01",
+      "name": "Underground4",
+      "type": "Drive Image",
+      "source": "Underground4",
+      "suggested": "07-gaussian-splats"
+    },
+    {
+      "id": "media-extra-02",
+      "name": "Brice-Resume-TD.docx",
+      "type": "Document",
+      "source": "Brice-Resume-TD.docx",
+      "suggested": "00-general"
+    }
+  ],
+  "projects": [
+    {
+      "id": "01-republic-club",
+      "title": "Republic Club Pattaya",
+      "role": "Technical Director & Department Head",
+      "location": "Pattaya, Thailand (DJ Mag #90)",
+      "discipline": "AV Architecture",
+      "control_stack": [
+        "Resolume Arena 7 & Alley (DXV3 Transcoding)",
+        "Pangolin BEYOND FB4",
+        "NovaStar CoEX / MX40 Pro",
+        "DMX512 / Art-Net / sACN",
+        "3-Phase Power Distribution & Cam-Lock"
+      ],
+      "metrics": [
+        {
+          "label": "SHOW DOWNTIME",
+          "val": "0% Unscheduled"
+        },
+        {
+          "label": "LED MATRIX",
+          "val": "44-Zone Display Architecture"
+        },
+        {
+          "label": "LIGHTING GRID",
+          "val": "150+ DMX Fixtures"
+        },
+        {
+          "label": "LASER ARRAY",
+          "val": "6x Pangolin FB4 RGB"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Official Club Site & Gallery",
+          "url": "https://republic-nightclub.com/",
+          "badge": "Official Site"
+        },
+        {
+          "label": "EDM Addicts Profile & Top 100 Rank",
+          "url": "https://edm-addicts.com/club/republic-club-lounge",
+          "badge": "Press Feature"
+        },
+        {
+          "label": "Go To Pattaya Venue Guide",
+          "url": "https://www.gotopattaya.com/en/venues/republic-club-pattaya",
+          "badge": "City Guide"
+        },
+        {
+          "label": "Wanderlog Review & Party Profile",
+          "url": "https://wanderlog.com/place/details/1819232/republic-club-pattaya",
+          "badge": "Venue Review"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-rep-01",
+          "name": "Republic Club - Pattaya Video Reel",
+          "type": "YouTube Video",
+          "url": "https://youtu.be/wlw7MD1ZvoE",
+          "isPrimary": true,
+          "tag": "44-Zone LED Network"
+        },
+        {
+          "id": "media-rep-02",
+          "name": "DJ SPACEMONKEY LIVE at Republic Club Pattaya",
+          "type": "YouTube Video",
+          "url": "https://youtu.be/u3I85fqUf6w",
+          "isPrimary": false,
+          "tag": "Mainstage Live Set"
+        },
+        {
+          "id": "media-rep-03",
+          "name": "Republic Official Media Gallery",
+          "type": "Web Gallery",
+          "url": "https://republic-nightclub.com/",
+          "isPrimary": false,
+          "tag": "Mainstage & Kinetic Cube"
+        }
+      ]
+    },
+    {
+      "id": "02-immersive-vangogh",
+      "title": "Immersive Van Gogh Exhibition",
+      "role": "Site Lead & Lead Systems Director",
+      "location": "Pittsburgh, PA",
+      "discipline": "360\u00b0 Volumetric Projection Mapping",
+      "control_stack": [
+        "64x Christie Digital 3-Chip DLP Laser Projectors",
+        "Datapath FX4 Video Wall Controllers",
+        "SMPTE LTC Timecode Synchronization",
+        "Pipe Grid Rigging & Box Truss",
+        "Aerial Lift Operations"
+      ],
+      "metrics": [
+        {
+          "label": "CANVAS FOOTPRINT",
+          "val": "32,000 sq ft"
+        },
+        {
+          "label": "PROJECTION ENGINES",
+          "val": "64x Christie DLP Laser"
+        },
+        {
+          "label": "TECHNICAL CREW",
+          "val": "32 Technicians Managed"
+        },
+        {
+          "label": "OPTICAL ALIGNMENT",
+          "val": "360\u00b0 Edge-Blended"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "CBS Pittsburgh KDKA Exhibition Feature",
+          "url": "https://pittsburgh.cbslocal.com/",
+          "badge": "Broadcast News"
+        },
+        {
+          "label": "Lighthouse Immersive Exhibition Portal",
+          "url": "https://www.immersivevangogh.com/",
+          "badge": "Exhibition Portal"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-vg-01",
+          "name": "CBS Pittsburgh Exhibition Feature",
+          "type": "Video Reel",
+          "url": "https://pittsburgh.cbslocal.com/",
+          "isPrimary": true,
+          "tag": "64 Projector 360\u00b0 Edge-Blend"
+        }
+      ]
+    },
+    {
+      "id": "03-thexperience",
+      "title": "TheXperience Botanical Immersive Night-Park",
+      "role": "Lead Projection & Lighting Concept Designer",
+      "location": "Koh Samui, Thailand",
+      "discipline": "Spatial Computing",
+      "control_stack": [
+        "TouchDesigner GLSL Compute Shaders",
+        "3D Optical Throw Calculations",
+        "DMX Pyrotechnics & Flame Controllers",
+        "Sensor Networks",
+        "Electric Chain Hoist Rigging"
+      ],
+      "metrics": [
+        {
+          "label": "NIGHT PARK SPAN",
+          "val": "1.2 km Illuminated Path"
+        },
+        {
+          "label": "MAPPED SCULPTURES",
+          "val": "3x 3D Statues (Luna, Embrace, Ticha)"
+        },
+        {
+          "label": "INTERACTIVE MESH",
+          "val": "TouchDesigner Sensor Network"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Megatix Thailand Immersive Events",
+          "url": "https://megatix.in.th/",
+          "badge": "Ticketing Platform"
+        },
+        {
+          "label": "Wonderfruit Festival Participation Portal",
+          "url": "https://wonderfruit.co/",
+          "badge": "Cultural Festival"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-xp-01",
+          "name": "TheXperience2-night",
+          "type": "Drive Image",
+          "source": "TheXperience2-night",
+          "isPrimary": true,
+          "tag": "3D Statue Mapping (Luna)"
+        },
+        {
+          "id": "media-xp-02",
+          "name": "TheXperience1-statue-Day",
+          "type": "Drive Image",
+          "source": "TheXperience1-statue-Day",
+          "isPrimary": false,
+          "tag": "Structural Daylight Pre-Vis"
+        },
+        {
+          "id": "media-xp-03",
+          "name": "TheXperience3-led-forest",
+          "type": "Drive Image",
+          "source": "TheXperience3-led-forest",
+          "isPrimary": false,
+          "tag": "TouchDesigner Sensor Forest"
+        },
+        {
+          "id": "media-xp-04",
+          "name": "TheXperience6",
+          "type": "Drive Image",
+          "source": "TheXperience6",
+          "isPrimary": false,
+          "tag": "1.2km Park Panoramic"
+        },
+        {
+          "id": "media-xp-05",
+          "name": "TheXperience4-playa",
+          "type": "Drive Image",
+          "source": "TheXperience4-playa",
+          "isPrimary": false,
+          "tag": "Pyrotechnic Flame Spire A"
+        },
+        {
+          "id": "media-xp-06",
+          "name": "TheXperience5-Playa",
+          "type": "Drive Image",
+          "source": "TheXperience5-Playa",
+          "isPrimary": false,
+          "tag": "Pyrotechnic Flame Spire B"
+        }
+      ]
+    },
+    {
+      "id": "04-story-portal",
+      "title": "Story Portal Steampunk Interactive Stage",
+      "role": "Technical Director & Mechatronic Fabricator",
+      "location": "Miami, FL (Love Burn)",
+      "discipline": "Kinetic Mechatronics",
+      "control_stack": [
+        "Optical Rotary Encoders",
+        "Microcontroller Relay Logic",
+        "DMX Timed Flame Poofers",
+        "Aluminum Box Trussing",
+        "NEMA E-Stop Safety Loops"
+      ],
+      "metrics": [
+        {
+          "label": "MECHANICAL WHEEL",
+          "val": "10-Foot Gear Reduction"
+        },
+        {
+          "label": "FLAME POOFERS",
+          "val": "4x DMX Timed Relays"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Love Burn Community Reddit Archive",
+          "url": "https://www.reddit.com/r/Loveburn/comments/1p10ug9/love_burn_2026_discounted_art_sponsor_tickets_to/",
+          "badge": "Community Archive"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-sp-01",
+          "name": "Stage1-Storyportal1-action",
+          "type": "Drive Image",
+          "source": "Stage1-Storyportal1-action",
+          "isPrimary": true,
+          "tag": "DMX Flame Poofer Firing"
+        },
+        {
+          "id": "media-sp-02",
+          "name": "Stage2-Storyportal2-night",
+          "type": "Drive Image",
+          "source": "Stage2-Storyportal2-night",
+          "isPrimary": false,
+          "tag": "10-Foot Gear Wheel Night View"
+        },
+        {
+          "id": "media-sp-03",
+          "name": "Stage3-Storyportal3-design",
+          "type": "Drive Image",
+          "source": "Stage3-Storyportal3-design",
+          "isPrimary": false,
+          "tag": "CAD Gear-Reduction Assembly"
+        }
+      ]
+    },
+    {
+      "id": "05-artechouse-miami",
+      "title": "Artechouse Miami (MAGENTAVERSE)",
+      "role": "Lead Scenic Carpenter & LED Technician",
+      "location": "Miami Beach, FL",
+      "discipline": "Spatial Computing",
+      "control_stack": [
+        "TouchDesigner Generative Visual Feeds",
+        "Timber Structural Framing",
+        "Concealed Wire Chases",
+        "270\u00b0 Panoramic Projection Mapping"
+      ],
+      "metrics": [
+        {
+          "label": "PROJECTION WRAP",
+          "val": "270\u00b0 Panoramic Multi-Channel"
+        },
+        {
+          "label": "LED ARCHWAY",
+          "val": "Generative TouchDesigner Mesh"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "ARTECHOUSE Official Exhibition Archive",
+          "url": "https://www.artechouse.com/program/magentaverse-miami/",
+          "badge": "Exhibition Archive"
+        },
+        {
+          "label": "Dezeen Events Architectural Feature",
+          "url": "https://www.dezeen.com/eventsguide/2023/01/magentaverse-2023/",
+          "badge": "Design Press"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-art-01",
+          "name": "Artechouse1 / tunnel.jpg",
+          "type": "Drive Image",
+          "source": "Artechouse1",
+          "isPrimary": true,
+          "tag": "Responsive LED Tunnel Archway"
+        },
+        {
+          "id": "media-art-02",
+          "name": "Artechouse2-anything.jpg",
+          "type": "Drive Image",
+          "source": "Artechouse2-anything.jpg",
+          "isPrimary": false,
+          "tag": "Timber Framing & Wire Chase"
+        },
+        {
+          "id": "media-art-03",
+          "name": "Artechouse4",
+          "type": "Drive Image",
+          "source": "Artechouse4",
+          "isPrimary": false,
+          "tag": "Pantone Viva Magenta Canvas"
+        },
+        {
+          "id": "media-art-04",
+          "name": "artechouse3-crt.jpeg",
+          "type": "Drive Image",
+          "source": "artechouse3-crt.jpeg",
+          "isPrimary": false,
+          "tag": "CRT Video Array Wall"
+        }
+      ]
+    },
+    {
+      "id": "06-homebass-hijinx",
+      "title": "Home Bass & HiJinx Festival Stages",
+      "role": "Lead Staging Designer & Volumetric CAD Specialist",
+      "location": "Orlando, FL & Philadelphia, PA",
+      "discipline": "AV Architecture",
+      "control_stack": [
+        "Vectorworks Spotlight 3D Pre-Vis",
+        "ChamSys MagicQ & Obsidian ONYX",
+        "Resolume Arena 7 & Alley",
+        "Aluminum Box Trussing Rigging",
+        "3-Phase Power Distribution"
+      ],
+      "metrics": [
+        {
+          "label": "STAGE GEOMETRY",
+          "val": "270\u00b0 LED Screen Wrap"
+        },
+        {
+          "label": "STRUCTURAL CLEARANCE",
+          "val": "Column Wrap Pre-Vis"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Interactive & Immersive Staging Jobs",
+          "url": "https://jobs.interactiveimmersive.io/",
+          "badge": "Industry Portal"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-hb-01",
+          "name": "Stage5-Homebass2-night",
+          "type": "Drive Image",
+          "source": "Stage5-Homebass2-night",
+          "isPrimary": true,
+          "tag": "270\u00b0 Wrapped Stage Rig"
+        },
+        {
+          "id": "media-hb-02",
+          "name": "Stage6-HiJinx1-render",
+          "type": "Drive Image",
+          "source": "Stage6-HiJinx1-render",
+          "isPrimary": false,
+          "tag": "Vectorworks Column Wrap Pre-Vis"
+        }
+      ]
+    },
+    {
+      "id": "07-gaussian-splats",
+      "title": "Real-Time Gaussian Splatting & GPU Visuals",
+      "role": "GPU Visuals Developer & Creative Technologist",
+      "location": "R&D Lab / Concert Stages",
+      "discipline": "Spatial Computing",
+      "control_stack": [
+        "TouchDesigner GLSL Compute Shaders",
+        "LiDAR Point Cloud Displacement Engine",
+        "Pangolin BEYOND FB4 Laser Hardware",
+        "Aether Nano Custom Controller"
+      ],
+      "metrics": [
+        {
+          "label": "GPU FRAME RATE",
+          "val": "60 FPS Locked GLSL"
+        },
+        {
+          "label": "POINT CLOUD DISPLACEMENT",
+          "val": "Real-Time LiDAR Engine"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Brice Morneau GitHub Repository",
+          "url": "https://github.com/icaruslastflight/my-portfolio",
+          "badge": "GitHub Source"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-gs-01",
+          "name": "Underground3",
+          "type": "Drive Image",
+          "source": "Underground3",
+          "isPrimary": true,
+          "tag": "Pangolin FB4 Laser Web"
+        },
+        {
+          "id": "media-gs-02",
+          "name": "Underground1",
+          "type": "Drive Image",
+          "source": "Underground1",
+          "isPrimary": false,
+          "tag": "Warehouse Overhead Beam Sweep"
+        },
+        {
+          "id": "media-gs-03",
+          "name": "Underground2",
+          "type": "Drive Image",
+          "source": "Underground2",
+          "isPrimary": false,
+          "tag": "Multi-Plane Laser Slicing"
+        },
+        {
+          "id": "media-gs-04",
+          "name": "Underground5",
+          "type": "Drive Image",
+          "source": "Underground5",
+          "isPrimary": false,
+          "tag": "Ternion Sound Monochromatic Visuals"
+        },
+        {
+          "id": "media-gs-05",
+          "name": "Underground6",
+          "type": "Drive Image",
+          "source": "Underground6",
+          "isPrimary": false,
+          "tag": "Buku Headline Set Busking"
+        }
+      ]
+    },
+    {
+      "id": "08-bespoke-builds",
+      "title": "Bespoke Client Builds & Hospitality Staging",
+      "role": "Lead Carpenter & Systems Fabricator",
+      "location": "Bespoke Locations",
+      "discipline": "Kinetic Mechatronics",
+      "control_stack": [
+        "Modular Timber Joinery",
+        "Concealed Power Distribution",
+        "Sound-Reactive Projection Mapping",
+        "Radial LED Rigging"
+      ],
+      "metrics": [
+        {
+          "label": "TIMBER JOINERY",
+          "val": "Pergola Free-Standing Bar"
+        },
+        {
+          "label": "MURAL PROJECTION",
+          "val": "Sound-Reactive Mapping"
+        }
+      ],
+      "official_links": [
+        {
+          "label": "Sitara Experiential Design Index",
+          "url": "https://sitara.systems/experiential-design-index/",
+          "badge": "Industry Index"
+        }
+      ],
+      "assigned_media": [
+        {
+          "id": "media-bb-01",
+          "name": "Setdesign5-Wedding bar.jpg",
+          "type": "Drive Image",
+          "source": "Setdesign5-Wedding bar.jpg",
+          "isPrimary": true,
+          "tag": "Modular Timber Pergola Bar"
+        },
+        {
+          "id": "media-bb-02",
+          "name": "Setdesign3-portal build.jpg",
+          "type": "Drive Image",
+          "source": "Setdesign3-portal build.jpg",
+          "isPrimary": false,
+          "tag": "Radial LED Bar Bench Rig"
+        },
+        {
+          "id": "media-bb-03",
+          "name": "Setdesign2-Mural-flat",
+          "type": "Drive Image",
+          "source": "Setdesign2-Mural-flat",
+          "isPrimary": false,
+          "tag": "Sound-Reactive Projection Mural"
+        }
+      ]
+    }
+  ]
+}
