@@ -45,10 +45,11 @@ const INITIAL_PROJECTS = [
     ],
     summary: "Led 32-technician crew in optical throw alignment, pipe grid rigging, and video distribution across a 32,000 sq ft immersive 360° visual canvas.",
     official_links: [
+      { label: "Immersive Van Gogh Pittsburgh - The Venue", url: "https://vangoghpittsburgh.com/the-venue/", badge: "Official Site" },
       { label: "Lighthouse Immersive Exhibition Portal", url: "https://www.immersivevangogh.com/", badge: "Exhibition Portal" }
     ],
     assets: [
-      { id: "asset-vg-1", name: "CBS Pittsburgh Video Feature", type: "video", isPrimary: true, url: "https://pittsburgh.cbslocal.com/" },
+      { id: "asset-vg-1", name: "CBS Pittsburgh Video Feature", type: "video", isPrimary: true, url: "https://vangoghpittsburgh.com/the-venue/" },
       { id: "asset-vg-2", name: "64-Projector Optical Convergence Blueprint", type: "cad", isPrimary: false, url: "https://www.immersivevangogh.com/" }
     ]
   },
