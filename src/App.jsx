@@ -185,6 +185,18 @@ const UNASSIGNED_POOL = [
   { id: "pool-4", name: "LONGBOAT - UFDC Image Array 2", type: "pdf", url: "PDF Asset" }
 ];
 
+const CONTACT_PILL = {
+  backgroundColor: '#1e293b',
+  border: '1px solid #334155',
+  borderRadius: '999px',
+  padding: '9px 15px',
+  fontSize: '13px',
+  fontWeight: 600,
+  color: '#e2e8f0',
+  textDecoration: 'none',
+  whiteSpace: 'nowrap',
+};
+
 const FIELD = {
   backgroundColor: '#0a0f1a',
   border: '1px solid #334155',
@@ -737,9 +749,24 @@ export default function MobileMultiSelectPortfolio() {
           <p style={{ fontSize: '13px', color: '#94a3b8', margin: '0 0 4px', lineHeight: 1.5 }}>
             Available for technical direction, systems design, projection mapping and install work.
           </p>
-          <p style={{ fontSize: '12px', color: '#64748b', margin: '0 0 18px' }}>
+          <p style={{ fontSize: '12px', color: '#64748b', margin: '0 0 14px' }}>
             📍 Pittsburgh, PA, USA &nbsp;·&nbsp; Available for travel
           </p>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '20px' }}>
+            <a
+              href="mailto:Brice@primordial.video"
+              style={CONTACT_PILL}
+            >
+              ✉︎ Brice@primordial.video
+            </a>
+            <a
+              href="tel:+14123767138"
+              style={CONTACT_PILL}
+            >
+              ☎ (412) 376-7138
+            </a>
+          </div>
 
           {sent ? (
             <div style={{ backgroundColor: '#052e16', border: '1px solid #16a34a', borderRadius: '8px', padding: '16px', color: '#bbf7d0', fontSize: '13px' }}>
