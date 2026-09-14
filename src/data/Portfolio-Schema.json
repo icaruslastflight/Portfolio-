@@ -1,6 +1,15 @@
 {
-  "version": "7.0",
-  "updated": "2026-09-13",
+  "version": "11.0",
+  "updated": "2026-09-14",
+  "active_protocols": [
+    "Resolume Arena 7 & Alley DXV3",
+    "TouchDesigner GLSL",
+    "Pangolin BEYOND FB4",
+    "Vectorworks Spotlight 3D pre-vis",
+    "NovaStar CoEX/MX40 Pro",
+    "ChamSys MagicQ",
+    "DMX512/Art-Net/sACN/SMPTE LTC"
+  ],
   "unassigned_assets": [
     {
       "id": "media-extra-01",
@@ -24,6 +33,7 @@
       "role": "Technical Director & Department Head",
       "location": "Pattaya, Thailand (DJ Mag #90)",
       "discipline": "AV Architecture",
+      "summary": "Challenge: Unify fragmented video walls, multi-axis kinetic drops, and laser networks into a zero-latency live instrument operated from a single FOH console. Solution: Architected a 44-zone display matrix driven by Resolume Arena 7 DXV3 servers and Pangolin FB4 lasers over sACN/Art-Net with 3-phase power distribution. Outcome: Delivered 60 FPS synced visual execution with 0% unscheduled show downtime across full nightly residency sets.",
       "control_stack": [
         "Resolume Arena 7 & Alley (DXV3 Transcoding)",
         "Pangolin BEYOND FB4",
@@ -73,11 +83,20 @@
       ],
       "assigned_media": [
         {
-          "id": "media-rep-01",
-          "name": "Republic Club - Pattaya Video Reel",
-          "type": "YouTube Video",
-          "url": "https://youtu.be/wlw7MD1ZvoE",
+          "id": "media-rep-feature",
+          "name": "Republic Club Pattaya Primary Feature",
+          "type": "YouTube Feature",
+          "url": "https://youtu.be/6GY_e4yeLXw?t=17",
           "isPrimary": true,
+          "tag": "Primary Feature / 17-Second Cue"
+        },
+        {
+          "id": "media-rep-01",
+          "name": "Republic Pattaya 60 FPS Teaser",
+          "type": "Local H.265 Video Loop",
+          "url": "/media/republic-pattaya-teaser-mobile-h265.mp4",
+          "poster": "/media/Underground1.jpg",
+          "isPrimary": false,
           "tag": "44-Zone LED Network"
         },
         {
@@ -104,6 +123,7 @@
       "role": "Site Lead & Lead Systems Director",
       "location": "Pittsburgh, PA",
       "discipline": "360\u00b0 Volumetric Projection Mapping",
+      "summary": "Challenge: Turn a 32,000 sq ft industrial venue into one continuous 360\u00b0 canvas without visible seams or timing drift. Solution: Directed a 32-technician deployment of 64 Christie DLP laser engines, Datapath FX4 distribution, optical throw alignment, pipe-grid rigging, and SMPTE LTC synchronization. Outcome: Commissioned a fully edge-blended 360\u00b0 exhibition system across the complete 32,000 sq ft footprint.",
       "control_stack": [
         "64x Christie Digital 3-Chip DLP Laser Projectors",
         "Datapath FX4 Video Wall Controllers",
@@ -132,7 +152,7 @@
       "official_links": [
         {
           "label": "CBS Pittsburgh KDKA Exhibition Feature",
-          "url": "https://pittsburgh.cbslocal.com/",
+          "url": "https://www.cbsnews.com/pittsburgh/news/immersive-van-gogh-exhibit-opens-in-pittsburgh/",
           "badge": "Broadcast News"
         },
         {
@@ -144,11 +164,20 @@
       "assigned_media": [
         {
           "id": "media-vg-01",
-          "name": "CBS Pittsburgh Exhibition Feature",
-          "type": "Video Reel",
-          "url": "https://pittsburgh.cbslocal.com/",
+          "name": "Van Gogh 360\u00b0 60 FPS Teaser",
+          "type": "Local H.265 Video Loop",
+          "url": "/media/vangogh-360-teaser-mobile-h265.mp4",
+          "poster": "/media/Artechouse4.jpg",
           "isPrimary": true,
           "tag": "64 Projector 360\u00b0 Edge-Blend"
+        },
+        {
+          "id": "media-vg-press",
+          "name": "CBS Pittsburgh Exhibition Feature",
+          "type": "Broadcast Feature",
+          "url": "https://www.cbsnews.com/pittsburgh/news/immersive-van-gogh-exhibit-opens-in-pittsburgh/",
+          "isPrimary": false,
+          "tag": "CBS Pittsburgh / KDKA"
         }
       ]
     },
@@ -158,6 +187,7 @@
       "role": "Lead Projection & Lighting Concept Designer",
       "location": "Koh Samui, Thailand",
       "discipline": "Spatial Computing",
+      "summary": "Challenge: Connect monumental sculpture, a 1.2 km botanical route, and live flame effects into a coherent after-dark visitor journey. Solution: Designed optical projection studies for three Nathan Hooper statues and linked TouchDesigner sensor networks, lighting, hoist rigging, and DMX pyrotechnics. Outcome: Delivered responsive mapped landmarks and an interactive illuminated path spanning 1.2 km.",
       "control_stack": [
         "TouchDesigner GLSL Compute Shaders",
         "3D Optical Throw Calculations",
@@ -248,6 +278,7 @@
       "role": "Technical Director & Mechatronic Fabricator",
       "location": "Miami, FL (Love Burn)",
       "discipline": "Kinetic Mechatronics",
+      "summary": "Challenge: Make a ten-foot kinetic stage mechanism safely respond to direct audience input while controlling live flame effects. Solution: Fabricated a gear-reduction wheel with optical rotary encoders, microcontroller relay logic, NEMA emergency stops, and DMX-timed flame poofers. Outcome: Translated physical rotation into repeatable four-channel flame sequences with deterministic positional feedback.",
       "control_stack": [
         "Optical Rotary Encoders",
         "Microcontroller Relay Logic",
@@ -305,6 +336,7 @@
       "role": "Lead Scenic Carpenter & LED Technician",
       "location": "Miami Beach, FL",
       "discipline": "Spatial Computing",
+      "summary": "Challenge: Integrate responsive LED media into an architectural tunnel without exposing structure, cabling, or service paths. Solution: Built structural timber framing and concealed wire chases for a generative TouchDesigner LED mesh alongside a 270\u00b0 multi-channel projection environment. Outcome: Delivered a clean, visitor-ready responsive archway with all distribution and maintenance access hidden from view.",
       "control_stack": [
         "TouchDesigner Generative Visual Feeds",
         "Timber Structural Framing",
@@ -336,9 +368,10 @@
       "assigned_media": [
         {
           "id": "media-art-01",
-          "name": "Artechouse1 / tunnel.jpg",
-          "type": "Drive Image",
-          "source": "Artechouse1",
+          "name": "ARTECHOUSE Magentaverse 60 FPS Teaser",
+          "type": "Local H.265 Video Loop",
+          "url": "/media/artechouse-magentaverse-teaser-mobile-h265.mp4",
+          "poster": "/media/tunnel.jpg",
           "isPrimary": true,
           "tag": "Responsive LED Tunnel Archway"
         },
@@ -374,6 +407,7 @@
       "role": "Lead Staging Designer & Volumetric CAD Specialist",
       "location": "Orlando, FL & Philadelphia, PA",
       "discipline": "AV Architecture",
+      "summary": "Challenge: Fit immersive festival stages around fixed warehouse columns while preserving sightlines, rigging clearance, and a continuous LED canvas. Solution: Developed Vectorworks Spotlight 3D pre-vis for 270\u00b0 screen wraps, aluminum truss distribution, ChamSys control, and 3-phase power placement. Outcome: Issued build-ready geometry that resolved structural conflicts before load-in and maintained the intended panoramic audience view.",
       "control_stack": [
         "Vectorworks Spotlight 3D Pre-Vis",
         "ChamSys MagicQ & Obsidian ONYX",
@@ -423,6 +457,7 @@
       "role": "GPU Visuals Developer & Creative Technologist",
       "location": "R&D Lab / Concert Stages",
       "discipline": "Spatial Computing",
+      "summary": "Challenge: Render dense LiDAR point clouds as an expressive, audio-reactive concert instrument without sacrificing frame rate. Solution: Developed TouchDesigner GLSL compute pipelines for Gaussian splat displacement with Pangolin FB4 and custom Aether controller integration. Outcome: Sustained 60 FPS real-time spatial visuals with performance-ready parameter control.",
       "control_stack": [
         "TouchDesigner GLSL Compute Shaders",
         "LiDAR Point Cloud Displacement Engine",
@@ -495,6 +530,7 @@
       "role": "Lead Carpenter & Systems Fabricator",
       "location": "Bespoke Locations",
       "discipline": "Kinetic Mechatronics",
+      "summary": "Challenge: Deliver hospitality environments that combine custom scenic character with touring-grade power, lighting, and media integration. Solution: Fabricated modular timber joinery, free-standing pergola bars, concealed distribution, radial LED rigging, and sound-reactive projection systems. Outcome: Produced reusable, serviceable client builds that arrived show-ready while keeping power and signal infrastructure out of sight.",
       "control_stack": [
         "Modular Timber Joinery",
         "Concealed Power Distribution",
