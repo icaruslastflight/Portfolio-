@@ -73,10 +73,10 @@ const INITIAL_PROJECTS = [
       { label: "Wonderfruit Festival Participation Portal", url: "https://wonderfruit.co/", badge: "Cultural Festival" }
     ],
     assets: [
-      { id: "asset-xp-1", name: "TheXperience2-night (Luna Statue)", type: "image", isPrimary: true, url: "Drive Asset" },
-      { id: "asset-xp-2", name: "TheXperience1-statue-Day", type: "image", isPrimary: false, url: "Drive Asset" },
-      { id: "asset-xp-3", name: "TheXperience3-led-forest", type: "image", isPrimary: false, url: "Drive Asset" },
-      { id: "asset-xp-4", name: "TheXperience6-panoramic", type: "image", isPrimary: false, url: "Drive Asset" }
+      { id: "asset-xp-1", name: "TheXperience2-night (Luna Statue)", type: "image", isPrimary: true, url: "/media/TheXperience2-night.jpg" },
+      { id: "asset-xp-2", name: "TheXperience1-statue-Day", type: "image", isPrimary: false, url: "/media/TheXperience1-statue-Day.jpg" },
+      { id: "asset-xp-3", name: "TheXperience3-led-forest", type: "image", isPrimary: false, url: "/media/TheXperience3-led-forest.jpg" },
+      { id: "asset-xp-4", name: "TheXperience6-panoramic", type: "image", isPrimary: false, url: "/media/TheXperience6.jpg" }
     ]
   },
   {
@@ -95,9 +95,9 @@ const INITIAL_PROJECTS = [
       { label: "Love Burn Community Reddit Archive", url: "https://www.reddit.com/r/Loveburn/comments/1p10ug9/love_burn_2026_discounted_art_sponsor_tickets_to/", badge: "Community Archive" }
     ],
     assets: [
-      { id: "asset-sp-1", name: "Stage1-Storyportal1-action (Flame Poofer)", type: "image", isPrimary: true, url: "Drive Asset" },
-      { id: "asset-sp-2", name: "Stage2-Storyportal2-night", type: "image", isPrimary: false, url: "Drive Asset" },
-      { id: "asset-sp-3", name: "Stage3-Storyportal3-design", type: "cad", isPrimary: false, url: "Drive Asset" }
+      { id: "asset-sp-1", name: "Stage1-Storyportal1-action (Flame Poofer)", type: "image", isPrimary: true, url: "/media/Stage1-Storyportal1-action.jpg" },
+      { id: "asset-sp-2", name: "Stage2-Storyportal2-night", type: "image", isPrimary: false, url: "/media/Stage2-Storyportal2-night.jpg" },
+      { id: "asset-sp-3", name: "Stage3-Storyportal3-design", type: "cad", isPrimary: false, url: "/media/Stage3-Storyportal3-design.jpg" }
     ]
   },
   {
@@ -117,9 +117,9 @@ const INITIAL_PROJECTS = [
       { label: "Dezeen Events Architectural Feature", url: "https://www.dezeen.com/eventsguide/2023/01/magentaverse-2023/", badge: "Design Press" }
     ],
     assets: [
-      { id: "asset-art-1", name: "Artechouse1 / tunnel.jpg (LED Arch)", type: "image", isPrimary: true, url: "Drive Asset" },
-      { id: "asset-art-2", name: "Artechouse2-anything.jpg (Timber Framing)", type: "image", isPrimary: false, url: "Drive Asset" },
-      { id: "asset-art-3", name: "artechouse3-crt.jpeg (CRT Array Stack)", type: "image", isPrimary: false, url: "Drive Asset" }
+      { id: "asset-art-1", name: "Artechouse1 / tunnel.jpg (LED Arch)", type: "image", isPrimary: true, url: "/media/tunnel.jpg" },
+      { id: "asset-art-2", name: "Artechouse2-anything.jpg (Timber Framing)", type: "image", isPrimary: false, url: "/media/Artechouse2-anything.jpg" },
+      { id: "asset-art-3", name: "artechouse3-crt.jpeg (CRT Array Stack)", type: "image", isPrimary: false, url: "/media/artechouse3-crt.jpg" }
     ]
   },
   {
@@ -138,8 +138,8 @@ const INITIAL_PROJECTS = [
       { label: "Interactive & Immersive Staging Jobs", url: "https://jobs.interactiveimmersive.io/", badge: "Industry Portal" }
     ],
     assets: [
-      { id: "asset-hb-1", name: "Stage5-Homebass2-night (270° Stage)", type: "image", isPrimary: true, url: "Drive Asset" },
-      { id: "asset-hb-2", name: "Stage6-HiJinx1-render (Vectorworks Column Wrap)", type: "cad", isPrimary: false, url: "Drive Asset" }
+      { id: "asset-hb-1", name: "Stage5-Homebass2-night (270° Stage)", type: "image", isPrimary: true, url: "/media/Stage5-Homebass2-night.jpg" },
+      { id: "asset-hb-2", name: "Stage6-HiJinx1-render (Vectorworks Column Wrap)", type: "cad", isPrimary: false, url: "/media/Stage6-HiJinx1-render.jpg" }
     ]
   },
   {
@@ -158,9 +158,9 @@ const INITIAL_PROJECTS = [
       { label: "Brice Morneau GitHub Repository", url: "https://github.com/icaruslastflight/my-portfolio", badge: "GitHub Source" }
     ],
     assets: [
-      { id: "asset-gs-1", name: "Underground3 (FB4 Laser Geometry)", type: "image", isPrimary: true, url: "Drive Asset" },
-      { id: "asset-gs-2", name: "Underground5 (Ternion Sound Set)", type: "image", isPrimary: false, url: "Drive Asset" },
-      { id: "asset-gs-3", name: "Underground6 (Buku Visuals Set)", type: "image", isPrimary: false, url: "Drive Asset" }
+      { id: "asset-gs-1", name: "Underground3 (FB4 Laser Geometry)", type: "image", isPrimary: true, url: "/media/Underground3.jpg" },
+      { id: "asset-gs-2", name: "Underground5 (Ternion Sound Set)", type: "image", isPrimary: false, url: "/media/Underground5.jpg" },
+      { id: "asset-gs-3", name: "Underground6 (Buku Visuals Set)", type: "image", isPrimary: false, url: "/media/Underground6.jpg" }
     ]
   },
   {
@@ -179,19 +179,21 @@ const INITIAL_PROJECTS = [
       { label: "Sitara Experiential Design Index", url: "https://sitara.systems/experiential-design-index/", badge: "Industry Index" }
     ],
     assets: [
-      { id: "asset-bb-1", name: "Setdesign5-Wedding bar.jpg", type: "image", isPrimary: true, url: "Drive Asset" },
-      { id: "asset-bb-2", name: "Setdesign3-portal build.jpg (Radial LED Rig)", type: "image", isPrimary: false, url: "Drive Asset" },
-      { id: "asset-bb-3", name: "Setdesign2-Mural-flat", type: "image", isPrimary: false, url: "Drive Asset" }
+      { id: "asset-bb-1", name: "Setdesign5-Wedding bar.jpg", type: "image", isPrimary: true, url: "/media/Setdesign5-Wedding-bar.jpg" },
+      { id: "asset-bb-2", name: "Setdesign3-portal build.jpg (Radial LED Rig)", type: "image", isPrimary: false, url: "/media/Setdesign3-portal-build.jpg" },
+      { id: "asset-bb-3", name: "Setdesign2-Mural-flat", type: "image", isPrimary: false, url: "/media/Setdesign2-Mural-flat.jpg" }
     ]
   }
 ];
 
 const UNASSIGNED_POOL = [
-  { id: "pool-1", name: "Underground4 (Warehouse Beam Sweep)", type: "image", url: "Drive Asset" },
+  { id: "pool-1", name: "Underground4 (Warehouse Beam Sweep)", type: "image", url: "/media/Underground4.jpg" },
   { id: "pool-2", name: "Resume-TD.docx (Technical Director Spec)", type: "document", url: "Word Asset" },
   { id: "pool-3", name: "Resume-Creative.docx (Creative Technologist Spec)", type: "document", url: "Word Asset" },
   { id: "pool-4", name: "LONGBOAT - UFDC Image Array 2", type: "pdf", url: "PDF Asset" }
 ];
+
+const isLocalImage = (url) => typeof url === 'string' && url.startsWith('/media/');
 
 export default function MobileMultiSelectPortfolio() {
   const [projects, setProjects] = useState(INITIAL_PROJECTS);
@@ -586,6 +588,18 @@ export default function MobileMultiSelectPortfolio() {
                 ASSIGNED MEDIA ASSETS ({project.assets.length})
               </div>
 
+              {(() => {
+                const hero = project.assets.find(a => a.isPrimary && isLocalImage(a.url));
+                return hero ? (
+                  <img
+                    src={hero.url}
+                    alt={hero.name}
+                    loading="lazy"
+                    style={{ width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '6px', border: '1px solid #334155', marginBottom: '10px', display: 'block' }}
+                  />
+                ) : null;
+              })()}
+
               {project.assets.length === 0 ? (
                 <div style={{ fontSize: '11px', color: '#64748b', fontStyle: 'italic', padding: '8px', backgroundColor: '#1e293b', borderRadius: '4px' }}>
                   No media assigned yet. Short-press select or drag items here.
@@ -612,24 +626,34 @@ export default function MobileMultiSelectPortfolio() {
                           cursor: isAdminOpen ? 'pointer' : 'default'
                         }}
                       >
-                        <div>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                            {selected && (
-                              <span style={{ backgroundColor: '#22c55e', color: '#fff', fontSize: '10px', fontWeight: 900, borderRadius: '50%', width: '16px', height: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                ✓
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0 }}>
+                          {isLocalImage(asset.url) && (
+                            <img
+                              src={asset.url}
+                              alt={asset.name}
+                              loading="lazy"
+                              style={{ width: '72px', height: '54px', objectFit: 'cover', borderRadius: '4px', border: '1px solid #334155', flexShrink: 0 }}
+                            />
+                          )}
+                          <div style={{ minWidth: 0 }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                              {selected && (
+                                <span style={{ backgroundColor: '#22c55e', color: '#fff', fontSize: '10px', fontWeight: 900, borderRadius: '50%', width: '16px', height: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                  ✓
+                                </span>
+                              )}
+                              {asset.isPrimary && (
+                                <span style={{ backgroundColor: '#eab308', color: '#000', fontSize: '9px', fontWeight: 900, padding: '2px 6px', borderRadius: '4px' }}>
+                                  ★ HERO
+                                </span>
+                              )}
+                              <span style={{ fontSize: '12px', fontWeight: 700, color: '#f8fafc' }}>
+                                {asset.name}
                               </span>
-                            )}
-                            {asset.isPrimary && (
-                              <span style={{ backgroundColor: '#eab308', color: '#000', fontSize: '9px', fontWeight: 900, padding: '2px 6px', borderRadius: '4px' }}>
-                                ★ HERO
-                              </span>
-                            )}
-                            <span style={{ fontSize: '12px', fontWeight: 700, color: '#f8fafc' }}>
-                              {asset.name}
-                            </span>
-                          </div>
-                          <div style={{ fontSize: '10px', color: selected ? '#e0f2fe' : '#64748b', marginTop: '2px' }}>
-                            Source: {asset.url}
+                            </div>
+                            <div style={{ fontSize: '10px', color: selected ? '#e0f2fe' : '#64748b', marginTop: '2px' }}>
+                              Source: {asset.url}
+                            </div>
                           </div>
                         </div>
 
