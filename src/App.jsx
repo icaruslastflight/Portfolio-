@@ -185,6 +185,18 @@ const UNASSIGNED_POOL = [
   { id: "pool-4", name: "LONGBOAT - UFDC Image Array 2", type: "pdf", url: "PDF Asset" }
 ];
 
+const FIELD = {
+  backgroundColor: '#0a0f1a',
+  border: '1px solid #334155',
+  borderRadius: '8px',
+  padding: '11px 13px',
+  fontSize: '13px',
+  color: '#f8fafc',
+  fontFamily: 'inherit',
+  width: '100%',
+  boxSizing: 'border-box',
+};
+
 const isLocalImage = (url) => typeof url === 'string' && url.startsWith('/media/');
 
 export default function MobileMultiSelectPortfolio() {
@@ -193,6 +205,9 @@ export default function MobileMultiSelectPortfolio() {
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [isAdminOpen, setIsAdminOpen] = useState(false);
   const [isAdminAvailable, setIsAdminAvailable] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
   const [selectedItems, setSelectedItems] = useState([]);
   const [targetProjectSelect, setTargetProjectSelect] = useState(projects[0].id);
 
@@ -202,6 +217,28 @@ export default function MobileMultiSelectPortfolio() {
       setIsAdminOpen(true);
     }
   }, []);
+
+  // Netlify Forms accepts a urlencoded POST to any path on the site; the
+  // form-name field routes it to the form declared in index.html.
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setError('');
+    try {
+      const data = new FormData(e.target);
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString(),
+      });
+      if (!res.ok) throw new Error(`Submission failed (${res.status})`);
+      setSent(true);
+    } catch (err) {
+      setError(`${err.message}. You can also reach me through the CV link above.`);
+    } finally {
+      setSending(false);
+    }
+  };
 
   const filteredProjects = activeFilter === "ALL" 
     ? projects 
@@ -341,6 +378,22 @@ export default function MobileMultiSelectPortfolio() {
               Technical Director & Systems Architect
             </p>
           </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+            <a
+              href="/Brice-Morneau-CV.pdf"
+              download
+              style={{ backgroundColor: '#1e293b', color: '#e2e8f0', border: '1px solid #334155', borderRadius: '8px', padding: '10px 14px', fontSize: '13px', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}
+            >
+              ↓ Download CV
+            </a>
+            <a
+              href="#contact"
+              style={{ backgroundColor: '#0284c7', color: '#ffffff', borderRadius: '8px', padding: '10px 16px', fontSize: '13px', fontWeight: 700, textDecoration: 'none', whiteSpace: 'nowrap' }}
+            >
+              Get in touch
+            </a>
+          </div>
+
           {isAdminAvailable && (
             <button
               onClick={() => setIsAdminOpen(!isAdminOpen)}
@@ -673,6 +726,62 @@ export default function MobileMultiSelectPortfolio() {
             </div>
           </article>
         ))}
+
+        <section
+          id="contact"
+          style={{ backgroundColor: '#0f172a', border: '1px solid #1e293b', borderRadius: '12px', padding: '24px', marginTop: '8px' }}
+        >
+          <h2 style={{ fontSize: '20px', fontWeight: 800, color: '#f8fafc', margin: '0 0 6px' }}>
+            Let's build something
+          </h2>
+          <p style={{ fontSize: '13px', color: '#94a3b8', margin: '0 0 4px', lineHeight: 1.5 }}>
+            Available for technical direction, systems design, projection mapping and install work.
+          </p>
+          <p style={{ fontSize: '12px', color: '#64748b', margin: '0 0 18px' }}>
+            📍 Pittsburgh, PA, USA &nbsp;·&nbsp; Available for travel
+          </p>
+
+          {sent ? (
+            <div style={{ backgroundColor: '#052e16', border: '1px solid #16a34a', borderRadius: '8px', padding: '16px', color: '#bbf7d0', fontSize: '13px' }}>
+              Thanks — your message is through. I'll get back to you shortly.
+            </div>
+          ) : (
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              onSubmit={handleContactSubmit}
+              style={{ display: 'grid', gap: '10px', maxWidth: '560px' }}
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p style={{ display: 'none' }}>
+                <label>Leave this empty: <input name="bot-field" /></label>
+              </p>
+              <input
+                name="name" type="text" required placeholder="Your name"
+                style={FIELD}
+              />
+              <input
+                name="email" type="email" required placeholder="Email"
+                style={FIELD}
+              />
+              <textarea
+                name="message" rows={4} required placeholder="What are you building?"
+                style={{ ...FIELD, resize: 'vertical' }}
+              />
+              <button
+                type="submit" disabled={sending}
+                style={{ backgroundColor: sending ? '#334155' : '#0284c7', color: '#fff', border: 'none', borderRadius: '8px', padding: '12px 18px', fontSize: '14px', fontWeight: 700, cursor: sending ? 'default' : 'pointer', justifySelf: 'start' }}
+              >
+                {sending ? 'Sending…' : 'Send message'}
+              </button>
+              {error && (
+                <div style={{ color: '#fca5a5', fontSize: '12px' }}>{error}</div>
+              )}
+            </form>
+          )}
+        </section>
       </main>
     </div>
   );

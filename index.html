@@ -29,6 +29,16 @@
     <meta name="twitter:image" content="https://primordial-portfolio.netlify.app/share-preview.jpg" />
   </head>
   <body style="margin: 0; background-color: #0a0d12;">
+    <!-- Netlify detects forms by parsing deployed HTML at build time. The React
+         form is client-rendered and therefore invisible to that parser, so the
+         schema is declared here once. Hidden from users; React handles the UI. -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input type="text" name="bot-field" />
+    </form>
+
     <!-- PRERENDER:START -->
     <div id="root"></div>
     <!-- PRERENDER:END -->
