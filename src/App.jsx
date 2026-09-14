@@ -200,11 +200,13 @@ export default function MobileMultiSelectPortfolio() {
   const [unassigned, setUnassigned] = useState(UNASSIGNED_POOL);
   const [activeFilter, setActiveFilter] = useState("ALL");
   const [isAdminOpen, setIsAdminOpen] = useState(false);
+  const [isAdminAvailable, setIsAdminAvailable] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [targetProjectSelect, setTargetProjectSelect] = useState(projects[0].id);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.search.includes('admin=true')) {
+      setIsAdminAvailable(true);
       setIsAdminOpen(true);
     }
   }, []);
@@ -347,25 +349,27 @@ export default function MobileMultiSelectPortfolio() {
               Technical Director & Systems Architect
             </p>
           </div>
-          <button
-            onClick={() => setIsAdminOpen(!isAdminOpen)}
-            style={{
-              backgroundColor: isAdminOpen ? '#ef4444' : '#0284c7',
-              color: '#ffffff',
-              border: 'none',
-              borderRadius: '8px',
-              padding: '10px 14px',
-              fontSize: '13px',
-              fontWeight: 700,
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
-            }}
-          >
-            <span>{isAdminOpen ? '✕ CLOSE EDITOR' : '⚙️ SHORT-PRESS SORT'}</span>
-          </button>
+          {isAdminAvailable && (
+            <button
+              onClick={() => setIsAdminOpen(!isAdminOpen)}
+              style={{
+                backgroundColor: isAdminOpen ? '#ef4444' : '#0284c7',
+                color: '#ffffff',
+                border: 'none',
+                borderRadius: '8px',
+                padding: '10px 14px',
+                fontSize: '13px',
+                fontWeight: 700,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+              }}
+            >
+              <span>{isAdminOpen ? '✕ CLOSE EDITOR' : '⚙️ SHORT-PRESS SORT'}</span>
+            </button>
+          )}
         </div>
 
         {!isAdminOpen && (
