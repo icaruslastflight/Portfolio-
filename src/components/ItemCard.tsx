@@ -130,8 +130,8 @@ export const ItemCard: React.FC<ItemCardProps> = ({
     if (match?.dataUrl) return match.dataUrl;
     if (match?.externalUrl) return match.externalUrl;
     if (url && (url.startsWith('http') || url.startsWith('data:'))) return url;
-    if (filename) return `https://primordialvideo.netlify.app/${encodeURIComponent(filename)}`;
-    if (url) return `https://primordialvideo.netlify.app/${encodeURIComponent(url)}`;
+    if (filename) return `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(filename)}`;
+    if (url) return `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(url)}`;
     return null;
   };
 
@@ -626,8 +626,8 @@ export const ItemCard: React.FC<ItemCardProps> = ({
                 loading="lazy"
                 onClick={() => onOpenImageLightbox && onOpenImageLightbox(displayMediaSrc, item.title, item.imageCaption || 'Hero Visual')}
                 onError={(e) => {
-                  if (item.mediaFilename && !(e.target as HTMLImageElement).src.includes('primordialvideo.netlify.app')) {
-                    (e.target as HTMLImageElement).src = `https://primordialvideo.netlify.app/${encodeURIComponent(item.mediaFilename)}`;
+                  if (item.mediaFilename && !(e.target as HTMLImageElement).src.includes('primordial-portfolio.netlify.app')) {
+                    (e.target as HTMLImageElement).src = `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(item.mediaFilename)}`;
                   } else {
                     setImgLoadFailed(true);
                   }

@@ -79,6 +79,8 @@ export interface AuthorProfile {
   website: string;
   github: string;
   linkedin: string;
+  /** Optional; surfaced in exports. */
+  education?: string;
   summary: string;
 }
 

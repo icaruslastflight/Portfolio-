@@ -6,9 +6,11 @@ export const DEFAULT_AUTHOR_PROFILE: AuthorProfile = {
   email: 'events.bricem@gmail.com',
   phone: '(412) 376-7138',
   location: 'Pittsburgh, PA 15204 (Transit-Accessible & Tour-Ready • Regional Hub: PIT)',
-  website: 'primordialvideo.netlify.app',
-  github: 'https://github.com/bricemorneau',
+  website: 'primordial-portfolio.netlify.app',
+  github: 'https://github.com/icaruslastflight',
   linkedin: 'https://linkedin.com/in/bricemorneau',
+  education:
+    'Technical & Engineering Coursework — Community College of Allegheny County (CCAC), Pittsburgh, PA',
   summary:
     'Bridging physical computing, real-time generative graphics, automated concert lighting, high-output laser systems, and modular LED displays. 10+ years deploying resilient systems for stadium tours, immersive museums, and DJ Mag Top 100 venues. Pittsburgh urban core base (transit-accessible, instant on-call access to downtown hotel, venue, and theater districts; valid U.S. passport for international runs; all tour-contracted travel originates from Pittsburgh International Airport PIT).'
 };
@@ -566,10 +568,83 @@ export const DEFAULT_WORK_EXPERIENCE: WorkExperience[] = [
     starred: true,
     createdAt: Date.now() - 85000,
     updatedAt: Date.now() - 85000
+  },
+  {
+    id: 'exp_illume',
+    role: 'Stagehand Manager & Lead AV Specialist',
+    companyOrVenue: 'Illume Lighting & Event Design',
+    location: 'Pittsburgh, PA',
+    startDate: '2016',
+    endDate: '2022',
+    current: false,
+    employmentType: 'Staff / Department Management',
+    description:
+      'Six-year staff tenure running crew and shop operations for a Pittsburgh lighting and event design house, covering corporate galas, concerts, and venue installations.',
+    highlights: [
+      'Promoted to management within 4 months; directed crew onboarding, hands-on technical skill development, and role assignments',
+      'Staffed and led crews across hundreds of corporate galas, concerts, and venue installations',
+      'Managed shop prep, equipment maintenance logs, rental returns, and cable hygiene',
+      'Ensured all outgoing lighting and video gear was tested and show-ready before dispatch'
+    ],
+    skillsUsed: ['Crew Leadership & Onboarding', 'Shop Prep & Gear Testing', 'Equipment Maintenance Logs', 'Rental Logistics'],
+    keyMetrics: [
+      { label: 'Time to Management', value: 'Promoted within 4 months' },
+      { label: 'Tenure', value: '6 years (2016–2022)' }
+    ],
+    starred: false,
+    createdAt: Date.now() - 80000,
+    updatedAt: Date.now() - 80000
   }
 ];
 
 export const DEFAULT_SKILL_GROUPS: SkillGroup[] = [
+  {
+    id: 'skill_grp_lighting_consoles',
+    name: 'Lighting Consoles & Automated Fixture Service',
+    icon: 'Lightbulb',
+    color: 'amber',
+    description: 'Live console busking, DMX/Art-Net/sACN distribution, and component-level moving-head servicing.',
+    highlightMetric: { label: 'Rig Scale', value: '150+ Automated Fixtures' },
+    skills: [
+      {
+        id: 'sk_chamsys_onyx',
+        name: 'ChamSys MagicQ & Obsidian ONYX',
+        proficiency: 'Expert',
+        description: 'Live console busking, punt pages, dynamic colour and position palettes, and show-file maintenance under nightly high-tempo operation.',
+        keywords: ['MagicQ', 'Obsidian ONYX', 'Punt Pages', 'Live Busking', 'Palettes']
+      },
+      {
+        id: 'sk_dmx_networks',
+        name: 'DMX512-A, Art-Net, sACN & RDM',
+        proficiency: 'Expert',
+        description: 'Universe patching and distribution over Art-Net and sACN, RDM device management, Pathport nodes, Luminex switches, and opto-isolated splitters.',
+        keywords: ['DMX512-A', 'Art-Net', 'sACN', 'RDM', 'Pathport', 'Luminex']
+      },
+      {
+        id: 'sk_moving_head_service',
+        name: 'Automated Moving Head Service',
+        proficiency: 'Expert',
+        description: 'Tear-downs and optical maintenance on Robe, Clay Paky, Martin and Chauvet Professional fixtures: optical de-fogging, pan/tilt belt tensioning, stepper motor calibration, and multimeter tracing.',
+        keywords: ['Robe', 'Clay Paky', 'Martin', 'Chauvet', 'Belt Tensioning', 'Stepper Calibration']
+      },
+      {
+        id: 'sk_atmospherics',
+        name: 'Atmospherics & Stage SFX',
+        proficiency: 'Advanced',
+        description: 'Hazers, low-lying fog, cold sparks, and DMX flame effects, run with SFX safety clearance and venue coordination.',
+        keywords: ['Hazers', 'Low Fog', 'Cold Sparks', 'DMX Flame', 'SFX Clearance']
+      },
+      {
+        id: 'sk_showcontrol_apc40',
+        name: 'Integrated Show Control',
+        proficiency: 'Advanced',
+        description: 'Akai APC40 tri-computer control matrix routing bidirectional MIDI and OSC to trigger console overrides, multi-layer Resolume playback, and Pangolin lasers at locked 60 FPS.',
+        keywords: ['Akai APC40', 'MIDI', 'OSC', 'Tri-Computer Sync', '60 FPS']
+      }
+    ],
+    createdAt: Date.now() - 82000,
+    updatedAt: Date.now() - 82000
+  },
   {
     id: 'skill_grp_media_servers',
     name: 'Media Servers & Real-Time Generative Engines',

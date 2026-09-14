@@ -104,7 +104,7 @@ export const ExportPreviewModal: React.FC<ExportPreviewModalProps> = ({
     setIsZipping(true);
     try {
       const blob = await generateZipArchive(profile, deck, items, categories, managedAssets);
-      const filename = `primordialvideo_netlify_bundle.zip`;
+      const filename = `primordial-portfolio_bundle.zip`;
       downloadFile(blob, filename, 'application/zip');
     } catch (err) {
       console.error('Failed to create ZIP', err);
@@ -128,7 +128,7 @@ export const ExportPreviewModal: React.FC<ExportPreviewModalProps> = ({
                 <span>HTML &amp; Netlify Studio</span>
               </h2>
               <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-sky-950 border border-sky-800 text-sky-300">
-                primordialvideo.netlify.app
+                primordial-portfolio.netlify.app
               </span>
               <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-300">
                 {deck.itemIds.length} Items Selected

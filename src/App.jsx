@@ -49,8 +49,12 @@ const INITIAL_PROJECTS = [
       { label: "Lighthouse Immersive Exhibition Portal", url: "https://www.immersivevangogh.com/", badge: "Exhibition Portal" }
     ],
     assets: [
-      { id: "asset-vg-1", name: "CBS Pittsburgh Video Feature", type: "video", isPrimary: true, url: "https://vangoghpittsburgh.com/the-venue/" },
-      { id: "asset-vg-2", name: "64-Projector Optical Convergence Blueprint", type: "cad", isPrimary: false, url: "https://www.immersivevangogh.com/" }
+      { id: "asset-vg-1", name: "VanGogh1-StarryNight.jpg (Edge-Blended Gallery)", type: "image", isPrimary: true, url: "/media/VanGogh1-StarryNight.jpg" },
+      { id: "asset-vg-2", name: "VanGogh2-AlmondBlossoms.jpg (64-Projector Throw)", type: "image", isPrimary: false, url: "/media/VanGogh2-AlmondBlossoms.jpg" },
+      { id: "asset-vg-3", name: "VanGogh3-Irises.webp (Reflective Floor Canvas)", type: "image", isPrimary: false, url: "/media/VanGogh3-Irises.webp" },
+      { id: "asset-vg-4", name: "VanGogh4-PoemFloor.jpg (Interactive Gallery Room)", type: "image", isPrimary: false, url: "/media/VanGogh4-PoemFloor.jpg" },
+      { id: "asset-vg-5", name: "CBS Pittsburgh Video Feature", type: "video", isPrimary: false, url: "https://vangoghpittsburgh.com/the-venue/" },
+      { id: "asset-vg-6", name: "64-Projector Optical Convergence Blueprint", type: "cad", isPrimary: false, url: "https://www.immersivevangogh.com/" }
     ]
   },
   {
@@ -171,7 +175,8 @@ const INITIAL_PROJECTS = [
     official_links: [
     ],
     assets: [
-      { id: "asset-bb-1", name: "Setdesign5-Wedding bar.jpg", type: "image", isPrimary: true, url: "/media/Setdesign5-Wedding-bar.jpg" },
+      { id: "asset-bb-0", name: "Set Design Build Reel", type: "video", isPrimary: true, url: "/media/Setdesign1-hero.mp4", poster: "/media/Setdesign5-Wedding-bar.jpg" },
+      { id: "asset-bb-1", name: "Setdesign5-Wedding bar.jpg", type: "image", isPrimary: false, url: "/media/Setdesign5-Wedding-bar.jpg" },
       { id: "asset-bb-2", name: "Setdesign3-portal build.jpg (Radial LED Rig)", type: "image", isPrimary: false, url: "/media/Setdesign3-portal-build.jpg" },
       { id: "asset-bb-3", name: "Setdesign2-Mural-flat", type: "image", isPrimary: false, url: "/media/Setdesign2-Mural-flat.jpg" }
     ]
@@ -209,7 +214,13 @@ const FIELD = {
   boxSizing: 'border-box',
 };
 
-const isLocalImage = (url) => typeof url === 'string' && url.startsWith('/media/');
+const isLocalMedia = (url) => typeof url === 'string' && url.startsWith('/media/');
+const isVideoFile = (url) => typeof url === 'string' && /\.(mp4|webm|mov)$/i.test(url);
+
+// Kept image-only on purpose: the thumbnail strip renders these through <img>,
+// so a video asset must not satisfy it.
+const isLocalImage = (url) => isLocalMedia(url) && !isVideoFile(url);
+const isLocalVideo = (url) => isLocalMedia(url) && isVideoFile(url);
 
 export default function MobileMultiSelectPortfolio() {
   const [projects, setProjects] = useState(INITIAL_PROJECTS);
@@ -650,15 +661,26 @@ export default function MobileMultiSelectPortfolio() {
               </div>
 
               {(() => {
-                const hero = project.assets.find(a => a.isPrimary && isLocalImage(a.url));
-                return hero ? (
-                  <img
+                const hero = project.assets.find(a => a.isPrimary && isLocalMedia(a.url));
+                if (!hero) return null;
+                const heroStyle = { width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '6px', border: '1px solid #334155', marginBottom: '10px', display: 'block' };
+                // Controls stay on: an autoplaying loop needs a pause affordance (WCAG 2.2.2).
+                return isLocalVideo(hero.url) ? (
+                  <video
                     src={hero.url}
-                    alt={hero.name}
-                    loading="lazy"
-                    style={{ width: '100%', aspectRatio: '16 / 9', objectFit: 'cover', borderRadius: '6px', border: '1px solid #334155', marginBottom: '10px', display: 'block' }}
+                    poster={hero.poster}
+                    aria-label={hero.name}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    controls
+                    preload="auto"
+                    style={heroStyle}
                   />
-                ) : null;
+                ) : (
+                  <img src={hero.url} alt={hero.name} loading="lazy" style={heroStyle} />
+                );
               })()}
 
               {project.assets.length === 0 ? (

@@ -883,7 +883,7 @@ export default function App() {
     } else if (type === 'zip') {
       try {
         const blob = await generateZipArchive(profile, exportDeck, items, categories, managedAssets);
-        downloadFile(blob, `primordialvideo_netlify_bundle.zip`, 'application/zip');
+        downloadFile(blob, `primordial-portfolio_bundle.zip`, 'application/zip');
         showToast('Export bundle ZIP downloaded (Netlify ready)');
       } catch (err) {
         console.error(err);
@@ -917,7 +917,7 @@ export default function App() {
   const handleDownloadNetlifyZip = async () => {
     try {
       const blob = await generateZipArchive(profile, exportDeck, items, categories, managedAssets);
-      downloadFile(blob, 'primordialvideo_netlify_bundle.zip', 'application/zip');
+      downloadFile(blob, 'primordial-portfolio_bundle.zip', 'application/zip');
       showToast('Netlify Deploy Bundle ZIP downloaded!');
     } catch (err) {
       console.error(err);

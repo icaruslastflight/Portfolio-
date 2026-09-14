@@ -135,7 +135,7 @@ export const AddMediaModal: React.FC<AddMediaModalProps> = ({
   const handleSelectFromLibrary = (asset: ManagedAsset) => {
     setFilename(asset.filename);
     setMediaType(asset.fileType === 'video' ? 'video' : 'image');
-    const resolved = asset.dataUrl || asset.externalUrl || `https://primordialvideo.netlify.app/${encodeURIComponent(asset.filename)}`;
+    const resolved = asset.dataUrl || asset.externalUrl || `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(asset.filename)}`;
     setPreviewSrc(resolved);
   };
 
@@ -323,7 +323,7 @@ export const AddMediaModal: React.FC<AddMediaModalProps> = ({
                   type="url"
                   value={externalUrl}
                   onChange={(e) => setExternalUrl(e.target.value)}
-                  placeholder="https://primordialvideo.netlify.app/my_video.mp4 or https://..."
+                  placeholder="https://primordial-portfolio.netlify.app/media/my_video.mp4 or https://..."
                   className="flex-1 px-3 py-2 rounded-lg bg-stone-950 border border-stone-800 text-white font-mono text-xs focus:outline-hidden focus:ring-2 focus:ring-sky-500"
                 />
                 <button

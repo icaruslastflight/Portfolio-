@@ -591,7 +591,7 @@ export const ItemEditModal: React.FC<ItemEditModalProps> = ({
                     if (chosen) {
                       setMediaFilename(chosen.filename);
                       const isVid = chosen.fileType === 'video';
-                      const resolved = chosen.dataUrl || chosen.externalUrl || `https://primordialvideo.netlify.app/${encodeURIComponent(chosen.filename)}`;
+                      const resolved = chosen.dataUrl || chosen.externalUrl || `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(chosen.filename)}`;
                       if (isVid) {
                         setVideoUrl(resolved);
                         setType('video');

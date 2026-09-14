@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </span>
               </div>
               <p className="text-xs text-stone-500 truncate max-w-md">
-                <span className="font-semibold text-stone-200">{profile.title}</span> • PIT Hub • primordialvideo.netlify.app
+                <span className="font-semibold text-stone-200">{profile.title}</span> • PIT Hub • primordial-portfolio.netlify.app
               </p>
             </div>
           </div>
@@ -133,7 +133,7 @@ export const Header: React.FC<HeaderProps> = ({
               id="btn-header-html-studio"
               onClick={onOpenHtmlStudio}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-sky-900 bg-sky-50 hover:bg-sky-100 border border-sky-200 transition-colors"
-              title="Preview and manipulate live primordialvideo HTML code"
+              title="Preview and manipulate live portfolio HTML code"
             >
               <Globe className="w-3.5 h-3.5 text-sky-600" />
               <span>HTML &amp; Netlify Studio</span>
