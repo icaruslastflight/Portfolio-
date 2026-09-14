@@ -766,14 +766,6 @@ export default function MobileMultiSelectPortfolio() {
             >
               ☎ (412) 376-7138
             </a>
-            <a
-              href="https://www.linkedin.com/in/brice-morneau-216957252"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={CONTACT_PILL}
-            >
-              in · LinkedIn ↗
-            </a>
           </div>
 
           {sent ? (
