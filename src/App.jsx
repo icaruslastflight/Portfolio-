@@ -153,10 +153,32 @@ const INITIAL_PROJECTS = [
     official_links: [
     ],
     assets: [
-      { id: "asset-gs-1", name: "Underground3 (FB4 Laser Geometry)", type: "image", isPrimary: true, url: "/media/Underground3.jpg" },
-      { id: "asset-gs-2", name: "Underground5 (Ternion Sound Set)", type: "image", isPrimary: false, url: "/media/Underground5.jpg" },
-      { id: "asset-gs-3", name: "Underground6 (Buku Visuals Set)", type: "image", isPrimary: false, url: "/media/Underground6.jpg" },
-      { id: "asset-gs-4", name: "Underground1 (Warehouse Stage Floor)", type: "image", isPrimary: false, url: "/media/Underground1.jpg" }
+      { id: "asset-gs-1", name: "Gaussian Splat Point Cloud Capture", type: "video", isPrimary: true, url: "/media/GaussianSplats1-Pointcloud.mp4" },
+      { id: "asset-gs-2", name: "GPU Visuals Capture (2025-12-12)", type: "video", isPrimary: false, url: "/media/GaussianSplats2-Capture-20251212.mp4" },
+      { id: "asset-gs-3", name: "Digital Feedback Loop Visuals", type: "video", isPrimary: false, url: "/media/GaussianSplats3-DigitalFeedback.mp4" },
+      { id: "asset-gs-4", name: "Gaussian Splat GPU Visuals Capture", type: "video", isPrimary: false, url: "/media/GaussianSplats4-Capture.mp4" }
+    ]
+  },
+  {
+    id: "underground-stage",
+    title: "Underground Stage Design",
+    role: "Laser Systems Designer & Live Visual Operator",
+    location: "Warehouse / Underground Venue",
+    discipline: "AV Architecture",
+    stack: ["Pangolin BEYOND FB4", "Multi-Plane Laser Slicing", "Warehouse Beam Rigging", "Monochromatic Visual Programming"],
+    metrics: [
+      { label: "LASER ARRAY", val: "Multi-Plane FB4 Network" },
+      { label: "PROGRAM FORMAT", val: "Live Headline Set Busking" }
+    ],
+    summary: "Challenge: Give a bare warehouse floor a cohesive laser-and-visual identity for back-to-back headline sets without a fixed rig plan. Solution: Deployed a Pangolin FB4 multi-plane laser network with monochromatic visual programming and overhead beam sweeps, adapted set-to-set for acts including a Buku headline slot and a Ternion Sound show. Outcome: Delivered a repeatable warehouse rig capable of fast turnarounds between distinct live visual programs.",
+    official_links: [
+    ],
+    assets: [
+      { id: "asset-us-1", name: "Underground3 (FB4 Laser Geometry)", type: "image", isPrimary: true, url: "/media/Underground3.jpg" },
+      { id: "asset-us-2", name: "Underground1 (Warehouse Overhead Beam Sweep)", type: "image", isPrimary: false, url: "/media/Underground1.jpg" },
+      { id: "asset-us-3", name: "Underground2 (Multi-Plane Laser Slicing)", type: "image", isPrimary: false, url: "/media/Underground2.jpg" },
+      { id: "asset-us-4", name: "Underground5 (Ternion Sound Set)", type: "image", isPrimary: false, url: "/media/Underground5.jpg" },
+      { id: "asset-us-5", name: "Underground6 (Buku Headline Set Busking)", type: "image", isPrimary: false, url: "/media/Underground6.jpg" }
     ]
   },
   {

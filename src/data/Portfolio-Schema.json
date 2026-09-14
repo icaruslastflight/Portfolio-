@@ -496,41 +496,100 @@
       "assigned_media": [
         {
           "id": "media-gs-01",
-          "name": "Underground3",
-          "type": "Drive Image",
-          "source": "Underground3",
+          "name": "Gaussian Splat Point Cloud Capture",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats1-Pointcloud.mp4",
+          "isPrimary": true,
+          "tag": "Real-Time Point Cloud Capture"
+        },
+        {
+          "id": "media-gs-02",
+          "name": "GPU Visuals Capture (2025-12-12)",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats2-Capture-20251212.mp4",
+          "isPrimary": false,
+          "tag": "GPU Visuals Capture"
+        },
+        {
+          "id": "media-gs-03",
+          "name": "Digital Feedback Loop Visuals",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats3-DigitalFeedback.mp4",
+          "isPrimary": false,
+          "tag": "Digital Feedback Loop"
+        },
+        {
+          "id": "media-gs-04",
+          "name": "Gaussian Splat GPU Visuals Capture",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats4-Capture.mp4",
+          "isPrimary": false,
+          "tag": "GPU Visuals Capture"
+        }
+      ]
+    },
+    {
+      "id": "underground-stage",
+      "title": "Underground Stage Design",
+      "role": "Laser Systems Designer & Live Visual Operator",
+      "location": "Warehouse / Underground Venue",
+      "discipline": "AV Architecture",
+      "control_stack": [
+        "Pangolin BEYOND FB4",
+        "Multi-Plane Laser Slicing",
+        "Warehouse Beam Rigging",
+        "Monochromatic Visual Programming"
+      ],
+      "metrics": [
+        {
+          "label": "LASER ARRAY",
+          "val": "Multi-Plane FB4 Network"
+        },
+        {
+          "label": "PROGRAM FORMAT",
+          "val": "Live Headline Set Busking"
+        }
+      ],
+      "summary": "Challenge: Give a bare warehouse floor a cohesive laser-and-visual identity for back-to-back headline sets without a fixed rig plan. Solution: Deployed a Pangolin FB4 multi-plane laser network with monochromatic visual programming and overhead beam sweeps, adapted set-to-set for acts including a Buku headline slot and a Ternion Sound show. Outcome: Delivered a repeatable warehouse rig capable of fast turnarounds between distinct live visual programs.",
+      "official_links": [],
+      "assigned_media": [
+        {
+          "id": "media-us-01",
+          "name": "Underground3 (FB4 Laser Geometry)",
+          "type": "Local Image",
+          "url": "/media/Underground3.jpg",
           "isPrimary": true,
           "tag": "Pangolin FB4 Laser Web"
         },
         {
-          "id": "media-gs-02",
-          "name": "Underground1",
-          "type": "Drive Image",
-          "source": "Underground1",
+          "id": "media-us-02",
+          "name": "Underground1 (Warehouse Overhead Beam Sweep)",
+          "type": "Local Image",
+          "url": "/media/Underground1.jpg",
           "isPrimary": false,
           "tag": "Warehouse Overhead Beam Sweep"
         },
         {
-          "id": "media-gs-03",
-          "name": "Underground2",
-          "type": "Drive Image",
-          "source": "Underground2",
+          "id": "media-us-03",
+          "name": "Underground2 (Multi-Plane Laser Slicing)",
+          "type": "Local Image",
+          "url": "/media/Underground2.jpg",
           "isPrimary": false,
           "tag": "Multi-Plane Laser Slicing"
         },
         {
-          "id": "media-gs-04",
-          "name": "Underground5",
-          "type": "Drive Image",
-          "source": "Underground5",
+          "id": "media-us-04",
+          "name": "Underground5 (Ternion Sound Set)",
+          "type": "Local Image",
+          "url": "/media/Underground5.jpg",
           "isPrimary": false,
           "tag": "Ternion Sound Monochromatic Visuals"
         },
         {
-          "id": "media-gs-05",
-          "name": "Underground6",
-          "type": "Drive Image",
-          "source": "Underground6",
+          "id": "media-us-05",
+          "name": "Underground6 (Buku Headline Set Busking)",
+          "type": "Local Image",
+          "url": "/media/Underground6.jpg",
           "isPrimary": false,
           "tag": "Buku Headline Set Busking"
         }
