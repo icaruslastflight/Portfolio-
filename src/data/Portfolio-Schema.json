@@ -1,6 +1,15 @@
 {
-  "version": "7.0",
-  "updated": "2026-09-13",
+  "version": "11.0",
+  "updated": "2026-09-14",
+  "active_protocols": [
+    "Resolume Arena 7 & Alley DXV3",
+    "TouchDesigner GLSL",
+    "Pangolin BEYOND FB4",
+    "Vectorworks Spotlight 3D pre-vis",
+    "NovaStar CoEX/MX40 Pro",
+    "ChamSys MagicQ",
+    "DMX512/Art-Net/sACN/SMPTE LTC"
+  ],
   "unassigned_assets": [
     {
       "id": "media-extra-01",
@@ -24,6 +33,7 @@
       "role": "Technical Director & Department Head",
       "location": "Pattaya, Thailand (DJ Mag #90)",
       "discipline": "AV Architecture",
+      "summary": "Challenge: Unify fragmented video walls, multi-axis kinetic drops, and laser networks into a zero-latency live instrument operated from a single FOH console. Solution: Architected a 44-zone display matrix driven by Resolume Arena 7 DXV3 servers and Pangolin FB4 lasers over sACN/Art-Net with 3-phase power distribution. Outcome: Delivered 60 FPS synced visual execution with 0% unscheduled show downtime across full nightly residency sets.",
       "control_stack": [
         "Resolume Arena 7 & Alley (DXV3 Transcoding)",
         "Pangolin BEYOND FB4",
@@ -73,20 +83,28 @@
       ],
       "assigned_media": [
         {
-          "id": "media-rep-01",
-          "name": "Republic Club - Pattaya Video Reel",
-          "type": "YouTube Video",
-          "url": "https://youtu.be/wlw7MD1ZvoE",
+          "id": "media-rep-feature",
+          "name": "Republic Club Pattaya Primary Feature",
+          "type": "YouTube Feature",
+          "url": "https://youtu.be/6GY_e4yeLXw?t=17",
           "isPrimary": true,
-          "tag": "44-Zone LED Network"
+          "tag": "Primary Feature / 17-Second Cue"
         },
         {
-          "id": "media-rep-02",
-          "name": "DJ SPACEMONKEY LIVE at Republic Club Pattaya",
-          "type": "YouTube Video",
-          "url": "https://youtu.be/u3I85fqUf6w",
+          "id": "media-rep-04",
+          "name": "Republic Club Pattaya Floor Reel (2025-06-14)",
+          "type": "Local Video",
+          "url": "/media/RepublicClub-FloorReel-20250614.mp4",
           "isPrimary": false,
-          "tag": "Mainstage Live Set"
+          "tag": "Floor Reel"
+        },
+        {
+          "id": "media-rep-05",
+          "name": "Republic Club Pattaya Floor Reel (2025-04-02)",
+          "type": "Local Video",
+          "url": "/media/RepublicClub-FloorReel-20250402.mp4",
+          "isPrimary": false,
+          "tag": "Floor Reel"
         },
         {
           "id": "media-rep-03",
@@ -103,7 +121,8 @@
       "title": "Immersive Van Gogh Exhibition",
       "role": "Site Lead & Lead Systems Director",
       "location": "Pittsburgh, PA",
-      "discipline": "360\u00b0 Volumetric Projection Mapping",
+      "discipline": "360° Volumetric Projection Mapping",
+      "summary": "Challenge: Turn a 32,000 sq ft industrial venue into one continuous 360° canvas without visible seams or timing drift. Solution: Directed a 32-technician deployment of 64 Christie DLP laser engines, Datapath FX4 distribution, optical throw alignment, pipe-grid rigging, and SMPTE LTC synchronization. Outcome: Commissioned a fully edge-blended 360° exhibition system across the complete 32,000 sq ft footprint.",
       "control_stack": [
         "64x Christie Digital 3-Chip DLP Laser Projectors",
         "Datapath FX4 Video Wall Controllers",
@@ -126,29 +145,56 @@
         },
         {
           "label": "OPTICAL ALIGNMENT",
-          "val": "360\u00b0 Edge-Blended"
+          "val": "360° Edge-Blended"
         }
       ],
       "official_links": [
         {
-          "label": "CBS Pittsburgh KDKA Exhibition Feature",
-          "url": "https://pittsburgh.cbslocal.com/",
-          "badge": "Broadcast News"
-        },
-        {
           "label": "Lighthouse Immersive Exhibition Portal",
-          "url": "https://www.immersivevangogh.com/",
+          "url": "https://share.google/NIUcGsQwKLrxDyrW8",
           "badge": "Exhibition Portal"
         }
       ],
       "assigned_media": [
         {
           "id": "media-vg-01",
-          "name": "CBS Pittsburgh Exhibition Feature",
-          "type": "Video Reel",
-          "url": "https://pittsburgh.cbslocal.com/",
+          "name": "VanGogh1-StarryNight.jpg",
+          "type": "Local Image",
+          "source": "VanGogh1-StarryNight.jpg",
           "isPrimary": true,
-          "tag": "64 Projector 360\u00b0 Edge-Blend"
+          "tag": "Edge-Blended Gallery"
+        },
+        {
+          "id": "media-vg-02",
+          "name": "VanGogh2-AlmondBlossoms.jpg",
+          "type": "Local Image",
+          "source": "VanGogh2-AlmondBlossoms.jpg",
+          "isPrimary": false,
+          "tag": "64-Projector Throw"
+        },
+        {
+          "id": "media-vg-03",
+          "name": "VanGogh3-Irises.webp",
+          "type": "Local Image",
+          "source": "VanGogh3-Irises.webp",
+          "isPrimary": false,
+          "tag": "Reflective Floor Canvas"
+        },
+        {
+          "id": "media-vg-04",
+          "name": "VanGogh4-PoemFloor.jpg",
+          "type": "Local Image",
+          "source": "VanGogh4-PoemFloor.jpg",
+          "isPrimary": false,
+          "tag": "Interactive Gallery Room"
+        },
+        {
+          "id": "media-vg-05",
+          "name": "64-Projector Optical Convergence Blueprint",
+          "type": "CAD",
+          "source": "https://www.immersivevangogh.com/",
+          "isPrimary": false,
+          "tag": "Optical Convergence Blueprint"
         }
       ]
     },
@@ -158,6 +204,7 @@
       "role": "Lead Projection & Lighting Concept Designer",
       "location": "Koh Samui, Thailand",
       "discipline": "Spatial Computing",
+      "summary": "Challenge: Connect monumental sculpture, a 1.2 km botanical route, and live flame effects into a coherent after-dark visitor journey. Solution: Designed optical projection studies for three Nathan Hooper statues and linked TouchDesigner sensor networks, lighting, hoist rigging, and DMX pyrotechnics. Outcome: Delivered responsive mapped landmarks and an interactive illuminated path spanning 1.2 km.",
       "control_stack": [
         "TouchDesigner GLSL Compute Shaders",
         "3D Optical Throw Calculations",
@@ -248,6 +295,7 @@
       "role": "Technical Director & Mechatronic Fabricator",
       "location": "Miami, FL (Love Burn)",
       "discipline": "Kinetic Mechatronics",
+      "summary": "Challenge: Make a ten-foot kinetic stage mechanism safely respond to direct audience input while controlling live flame effects. Solution: Fabricated a gear-reduction wheel with optical rotary encoders, microcontroller relay logic, NEMA emergency stops, and DMX-timed flame poofers. Outcome: Translated physical rotation into repeatable four-channel flame sequences with deterministic positional feedback.",
       "control_stack": [
         "Optical Rotary Encoders",
         "Microcontroller Relay Logic",
@@ -305,16 +353,17 @@
       "role": "Lead Scenic Carpenter & LED Technician",
       "location": "Miami Beach, FL",
       "discipline": "Spatial Computing",
+      "summary": "Challenge: Integrate responsive LED media into an architectural tunnel without exposing structure, cabling, or service paths. Solution: Built structural timber framing and concealed wire chases for a generative TouchDesigner LED mesh alongside a 270° multi-channel projection environment. Outcome: Delivered a clean, visitor-ready responsive archway with all distribution and maintenance access hidden from view.",
       "control_stack": [
         "TouchDesigner Generative Visual Feeds",
         "Timber Structural Framing",
         "Concealed Wire Chases",
-        "270\u00b0 Panoramic Projection Mapping"
+        "270° Panoramic Projection Mapping"
       ],
       "metrics": [
         {
           "label": "PROJECTION WRAP",
-          "val": "270\u00b0 Panoramic Multi-Channel"
+          "val": "270° Panoramic Multi-Channel"
         },
         {
           "label": "LED ARCHWAY",
@@ -326,19 +375,15 @@
           "label": "ARTECHOUSE Official Exhibition Archive",
           "url": "https://www.artechouse.com/program/magentaverse-miami/",
           "badge": "Exhibition Archive"
-        },
-        {
-          "label": "Dezeen Events Architectural Feature",
-          "url": "https://www.dezeen.com/eventsguide/2023/01/magentaverse-2023/",
-          "badge": "Design Press"
         }
       ],
       "assigned_media": [
         {
           "id": "media-art-01",
-          "name": "Artechouse1 / tunnel.jpg",
-          "type": "Drive Image",
-          "source": "Artechouse1",
+          "name": "ARTECHOUSE Magentaverse 60 FPS Teaser",
+          "type": "Local H.265 Video Loop",
+          "url": "/media/artechouse-magentaverse-teaser-mobile-h265.mp4",
+          "poster": "/media/tunnel.jpg",
           "isPrimary": true,
           "tag": "Responsive LED Tunnel Archway"
         },
@@ -374,6 +419,7 @@
       "role": "Lead Staging Designer & Volumetric CAD Specialist",
       "location": "Orlando, FL & Philadelphia, PA",
       "discipline": "AV Architecture",
+      "summary": "Challenge: Fit immersive festival stages around fixed warehouse columns while preserving sightlines, rigging clearance, and a continuous LED canvas. Solution: Developed Vectorworks Spotlight 3D pre-vis for 270° screen wraps, aluminum truss distribution, ChamSys control, and 3-phase power placement. Outcome: Issued build-ready geometry that resolved structural conflicts before load-in and maintained the intended panoramic audience view.",
       "control_stack": [
         "Vectorworks Spotlight 3D Pre-Vis",
         "ChamSys MagicQ & Obsidian ONYX",
@@ -384,7 +430,7 @@
       "metrics": [
         {
           "label": "STAGE GEOMETRY",
-          "val": "270\u00b0 LED Screen Wrap"
+          "val": "270° LED Screen Wrap"
         },
         {
           "label": "STRUCTURAL CLEARANCE",
@@ -405,7 +451,7 @@
           "type": "Drive Image",
           "source": "Stage5-Homebass2-night",
           "isPrimary": true,
-          "tag": "270\u00b0 Wrapped Stage Rig"
+          "tag": "270° Wrapped Stage Rig"
         },
         {
           "id": "media-hb-02",
@@ -423,6 +469,7 @@
       "role": "GPU Visuals Developer & Creative Technologist",
       "location": "R&D Lab / Concert Stages",
       "discipline": "Spatial Computing",
+      "summary": "Challenge: Render dense LiDAR point clouds as an expressive, audio-reactive concert instrument without sacrificing frame rate. Solution: Developed TouchDesigner GLSL compute pipelines for Gaussian splat displacement with Pangolin FB4 and custom Aether controller integration. Outcome: Sustained 60 FPS real-time spatial visuals with performance-ready parameter control.",
       "control_stack": [
         "TouchDesigner GLSL Compute Shaders",
         "LiDAR Point Cloud Displacement Engine",
@@ -449,41 +496,100 @@
       "assigned_media": [
         {
           "id": "media-gs-01",
-          "name": "Underground3",
-          "type": "Drive Image",
-          "source": "Underground3",
+          "name": "Gaussian Splat Point Cloud Capture",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats1-Pointcloud.mp4",
+          "isPrimary": true,
+          "tag": "Real-Time Point Cloud Capture"
+        },
+        {
+          "id": "media-gs-02",
+          "name": "GPU Visuals Capture (2025-12-12)",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats2-Capture-20251212.mp4",
+          "isPrimary": false,
+          "tag": "GPU Visuals Capture"
+        },
+        {
+          "id": "media-gs-03",
+          "name": "Digital Feedback Loop Visuals",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats3-DigitalFeedback.mp4",
+          "isPrimary": false,
+          "tag": "Digital Feedback Loop"
+        },
+        {
+          "id": "media-gs-04",
+          "name": "Gaussian Splat GPU Visuals Capture",
+          "type": "Local Video",
+          "url": "/media/GaussianSplats4-Capture.mp4",
+          "isPrimary": false,
+          "tag": "GPU Visuals Capture"
+        }
+      ]
+    },
+    {
+      "id": "underground-stage",
+      "title": "Underground Stage Design",
+      "role": "Laser Systems Designer & Live Visual Operator",
+      "location": "Warehouse / Underground Venue",
+      "discipline": "AV Architecture",
+      "control_stack": [
+        "Pangolin BEYOND FB4",
+        "Multi-Plane Laser Slicing",
+        "Warehouse Beam Rigging",
+        "Monochromatic Visual Programming"
+      ],
+      "metrics": [
+        {
+          "label": "LASER ARRAY",
+          "val": "Multi-Plane FB4 Network"
+        },
+        {
+          "label": "PROGRAM FORMAT",
+          "val": "Live Headline Set Busking"
+        }
+      ],
+      "summary": "Challenge: Give a bare warehouse floor a cohesive laser-and-visual identity for back-to-back headline sets without a fixed rig plan. Solution: Deployed a Pangolin FB4 multi-plane laser network with monochromatic visual programming and overhead beam sweeps, adapted set-to-set for acts including a Buku headline slot and a Ternion Sound show. Outcome: Delivered a repeatable warehouse rig capable of fast turnarounds between distinct live visual programs.",
+      "official_links": [],
+      "assigned_media": [
+        {
+          "id": "media-us-01",
+          "name": "Underground3 (FB4 Laser Geometry)",
+          "type": "Local Image",
+          "url": "/media/Underground3.jpg",
           "isPrimary": true,
           "tag": "Pangolin FB4 Laser Web"
         },
         {
-          "id": "media-gs-02",
-          "name": "Underground1",
-          "type": "Drive Image",
-          "source": "Underground1",
+          "id": "media-us-02",
+          "name": "Underground1 (Warehouse Overhead Beam Sweep)",
+          "type": "Local Image",
+          "url": "/media/Underground1.jpg",
           "isPrimary": false,
           "tag": "Warehouse Overhead Beam Sweep"
         },
         {
-          "id": "media-gs-03",
-          "name": "Underground2",
-          "type": "Drive Image",
-          "source": "Underground2",
+          "id": "media-us-03",
+          "name": "Underground2 (Multi-Plane Laser Slicing)",
+          "type": "Local Image",
+          "url": "/media/Underground2.jpg",
           "isPrimary": false,
           "tag": "Multi-Plane Laser Slicing"
         },
         {
-          "id": "media-gs-04",
-          "name": "Underground5",
-          "type": "Drive Image",
-          "source": "Underground5",
+          "id": "media-us-04",
+          "name": "Underground5 (Ternion Sound Set)",
+          "type": "Local Image",
+          "url": "/media/Underground5.jpg",
           "isPrimary": false,
           "tag": "Ternion Sound Monochromatic Visuals"
         },
         {
-          "id": "media-gs-05",
-          "name": "Underground6",
-          "type": "Drive Image",
-          "source": "Underground6",
+          "id": "media-us-05",
+          "name": "Underground6 (Buku Headline Set Busking)",
+          "type": "Local Image",
+          "url": "/media/Underground6.jpg",
           "isPrimary": false,
           "tag": "Buku Headline Set Busking"
         }
@@ -495,6 +601,7 @@
       "role": "Lead Carpenter & Systems Fabricator",
       "location": "Bespoke Locations",
       "discipline": "Kinetic Mechatronics",
+      "summary": "Challenge: Deliver hospitality environments that combine custom scenic character with touring-grade power, lighting, and media integration. Solution: Fabricated modular timber joinery, free-standing pergola bars, concealed distribution, radial LED rigging, and sound-reactive projection systems. Outcome: Produced reusable, serviceable client builds that arrived show-ready while keeping power and signal infrastructure out of sight.",
       "control_stack": [
         "Modular Timber Joinery",
         "Concealed Power Distribution",
@@ -520,11 +627,19 @@
       ],
       "assigned_media": [
         {
+          "id": "media-bb-00",
+          "name": "Set Design Build Reel",
+          "type": "Local Video",
+          "source": "/media/Setdesign1-hero.mp4",
+          "isPrimary": true,
+          "tag": "Set Design Build Reel"
+        },
+        {
           "id": "media-bb-01",
           "name": "Setdesign5-Wedding bar.jpg",
           "type": "Drive Image",
           "source": "Setdesign5-Wedding bar.jpg",
-          "isPrimary": true,
+          "isPrimary": false,
           "tag": "Modular Timber Pergola Bar"
         },
         {

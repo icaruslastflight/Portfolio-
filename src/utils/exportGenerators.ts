@@ -1,5 +1,6 @@
 import JSZip from 'jszip';
 import { AuthorProfile, Category, ExportDeck, PortfolioItem, ManagedAsset } from '../types';
+import { LIVE_ASSET_BASE } from '../config';
 
 export function getCategoryMap(categories: Category[]): Record<string, Category> {
   const map: Record<string, Category> = {};
@@ -27,7 +28,7 @@ export function resolveAssetUrl(
     case 'assets_folder':
       return `assets/${filename}`;
     case 'netlify_live':
-      return `https://primordialvideo.netlify.app/${filename}`;
+      return `${LIVE_ASSET_BASE}/${filename}`;
     case 'embedded':
       return directUrl || filename;
     case 'relative':
@@ -110,7 +111,7 @@ export function generateResumeMarkdown(
 }
 
 /**
- * Generates the signature Cyber-Dark HTML portfolio matching primordialvideo.netlify.app
+ * Generates the signature Cyber-Dark HTML portfolio matching primordial-portfolio.netlify.app
  */
 export function generatePrimordialDarkHtmlPortfolio(
   profile: AuthorProfile,
@@ -167,8 +168,8 @@ export function generatePrimordialDarkHtmlPortfolio(
           : '';
 
       const mediaBlock = isVideo
-        ? `<video src="${assetSrc}" controls preload="metadata" class="w-full h-full object-cover" onerror="if(this.src!=='https://primordialvideo.netlify.app/${encodeURIComponent(item.mediaFilename || '')}'){this.src='https://primordialvideo.netlify.app/${encodeURIComponent(item.mediaFilename || '')}';}"></video>`
-        : `<img src="${assetSrc}" alt="${item.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" onerror="if(!this.src.includes('primordialvideo.netlify.app') && '${item.mediaFilename || ''}'){this.src='https://primordialvideo.netlify.app/${encodeURIComponent(item.mediaFilename || '')}';}else{this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center font-mono text-xs text-zinc-500 bg-brand-surface\\'>${item.mediaFilename || 'Asset Preview'}</div>';}">`;
+        ? `<video src="${assetSrc}" controls preload="metadata" class="w-full h-full object-cover" onerror="if(this.src!=='https://primordial-portfolio.netlify.app/media/${encodeURIComponent(item.mediaFilename || '')}'){this.src='https://primordial-portfolio.netlify.app/media/${encodeURIComponent(item.mediaFilename || '')}';}"></video>`
+        : `<img src="${assetSrc}" alt="${item.title.replace(/"/g, '&quot;')}" class="w-full h-full object-cover" onerror="if(!this.src.includes('primordial-portfolio.netlify.app') && '${item.mediaFilename || ''}'){this.src='https://primordial-portfolio.netlify.app/media/${encodeURIComponent(item.mediaFilename || '')}';}else{this.parentElement.innerHTML='<div class=\\'w-full h-full flex items-center justify-center font-mono text-xs text-zinc-500 bg-brand-surface\\'>${item.mediaFilename || 'Asset Preview'}</div>';}">`;
 
       // Build grouped images section with context
       let imageGroupsHtml = '';
@@ -189,7 +190,7 @@ export function generatePrimordialDarkHtmlPortfolio(
                   ${grp.images.map((img) => `
                     <div class="rounded border border-brand-border overflow-hidden bg-black flex flex-col">
                       <div class="aspect-video w-full relative">
-                        <img src="${resolveAssetUrl(img.filename, undefined, assetRegistry, strategy)}" alt="${img.caption || img.filename}" class="w-full h-full object-cover" onerror="this.src='https://primordialvideo.netlify.app/${encodeURIComponent(img.filename)}'"/>
+                        <img src="${resolveAssetUrl(img.filename, undefined, assetRegistry, strategy)}" alt="${img.caption || img.filename}" class="w-full h-full object-cover" onerror="this.src='https://primordial-portfolio.netlify.app/media/${encodeURIComponent(img.filename)}'"/>
                       </div>
                       ${(img.caption || img.context) ? `
                         <div class="p-1.5 text-[10px] font-mono bg-brand-panel border-t border-brand-border/50">
@@ -219,7 +220,7 @@ export function generatePrimordialDarkHtmlPortfolio(
               <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-xs font-mono text-[9px] text-brand-accent">Primary Visual</span>
             </div>
             <div class="aspect-video rounded-lg bg-brand-surface border border-brand-border overflow-hidden relative">
-              ${secSrc ? `<img src="${secSrc}" alt="Secondary reference" class="w-full h-full object-cover" onerror="this.src='https://primordialvideo.netlify.app/${encodeURIComponent(secondaryImg || '')}'"/>` : `<div class="w-full h-full flex items-center justify-center font-mono text-xs text-zinc-500 bg-brand-surface">Rigging / Secondary Plot</div>`}
+              ${secSrc ? `<img src="${secSrc}" alt="Secondary reference" class="w-full h-full object-cover" onerror="this.src='https://primordial-portfolio.netlify.app/media/${encodeURIComponent(secondaryImg || '')}'"/>` : `<div class="w-full h-full flex items-center justify-center font-mono text-xs text-zinc-500 bg-brand-surface">Rigging / Secondary Plot</div>`}
               <span class="absolute bottom-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/70 backdrop-blur-xs font-mono text-[9px] text-zinc-300">Technical Context</span>
             </div>
           </div>
@@ -920,7 +921,7 @@ export function generateInteractiveHtmlPortfolio(
             '<summary>Image Groups & Context (' + item.imageGroups.length + ')</summary>' +
             item.imageGroups.map(grp => {
               const imgs = (grp.images || []).map(img => {
-                const src = img.filename ? 'https://primordialvideo.netlify.app/' + encodeURIComponent(img.filename) : '';
+                const src = img.filename ? 'https://primordial-portfolio.netlify.app/media/' + encodeURIComponent(img.filename) : '';
                 return '<div class="group-thumb-card">' +
                   '<img src="' + src + '" alt="' + (img.caption || img.filename) + '" onerror="this.style.display=\\'none\\'">' +
                   (img.caption || img.context ? '<div class="group-thumb-meta"><strong>' + (img.caption || '') + '</strong>' + (img.context ? '<span>' + img.context + '</span>' : '') + '</div>' : '') +
@@ -1047,7 +1048,7 @@ export async function generateZipArchive(
 ==================================================
 Author: ${profile.name}
 Role: ${profile.title}
-Deploy Target: primordialvideo.netlify.app or new Netlify site
+Deploy Target: primordial-portfolio.netlify.app or new Netlify site
 Generated: ${new Date().toLocaleString()}
 
 HOW TO DEPLOY TO NETLIFY IN 10 SECONDS:
@@ -1062,7 +1063,7 @@ Method B (GitHub / Git Repo):
 2. Push to your main branch. Netlify will build and deploy automatically.
 
 FILES INCLUDED:
-- index.html: Standalone Cyber-Dark HTML portfolio matching primordialvideo.netlify.app.
+- index.html: Standalone Cyber-Dark HTML portfolio matching primordial-portfolio.netlify.app.
 - resume.md: Clean, formatted technical resume reference.
 - portfolio_data.json: Structured JSON backup of all 10 case studies and CV items.
 - _redirects: Netlify routing configuration.

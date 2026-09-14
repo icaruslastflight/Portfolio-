@@ -78,7 +78,7 @@ export const BulkMediaWorkbench: React.FC<BulkMediaWorkbenchProps> = ({
   const resolveAssetSrc = (asset: ManagedAsset): string => {
     if (asset.dataUrl) return asset.dataUrl;
     if (asset.externalUrl) return asset.externalUrl;
-    return `https://primordialvideo.netlify.app/${encodeURIComponent(asset.filename)}`;
+    return `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(asset.filename)}`;
   };
 
   // Map: filename -> array of portfolio items that use this asset
@@ -681,8 +681,8 @@ export const BulkMediaWorkbench: React.FC<BulkMediaWorkbenchProps> = ({
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                           loading="lazy"
                           onError={(e) => {
-                            if (!resolvedUrl.includes('primordialvideo.netlify.app')) {
-                              (e.target as HTMLImageElement).src = `https://primordialvideo.netlify.app/${encodeURIComponent(asset.filename)}`;
+                            if (!resolvedUrl.includes('primordial-portfolio.netlify.app')) {
+                              (e.target as HTMLImageElement).src = `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(asset.filename)}`;
                             }
                           }}
                         />
@@ -949,7 +949,7 @@ export const BulkMediaWorkbench: React.FC<BulkMediaWorkbenchProps> = ({
             const isApplied = isPrimary || isInAux || isInGroup;
 
             // Current item media preview
-            const currentMediaUrl = item.videoUrl || item.imageUrl || (item.mediaFilename ? `https://primordialvideo.netlify.app/${encodeURIComponent(item.mediaFilename)}` : '');
+            const currentMediaUrl = item.videoUrl || item.imageUrl || (item.mediaFilename ? `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(item.mediaFilename)}` : '');
             const hasExistingMedia = Boolean(item.mediaFilename || item.imageUrl || item.videoUrl);
 
             return (

@@ -154,13 +154,13 @@ export const AssetManagerModal: React.FC<AssetManagerModalProps> = ({
       if (!asset.dataUrl && !asset.externalUrl) {
         onUpdateAsset({
           ...asset,
-          externalUrl: `https://primordialvideo.netlify.app/${encodeURIComponent(asset.filename)}`,
+          externalUrl: `https://primordial-portfolio.netlify.app/media/${encodeURIComponent(asset.filename)}`,
           updatedAt: Date.now()
         });
         linked++;
       }
     });
-    setBatchStatus(`Linked ${linked} assets to primordialvideo.netlify.app Live CDN!`);
+    setBatchStatus(`Linked ${linked} assets to primordial-portfolio.netlify.app Live CDN!`);
     setTimeout(() => setBatchStatus(null), 4000);
   };
 
@@ -183,7 +183,7 @@ export const AssetManagerModal: React.FC<AssetManagerModalProps> = ({
       }
     });
     const blob = await zip.generateAsync({ type: 'blob' });
-    downloadFile(blob, 'primordialvideo_media_assets.zip', 'application/zip');
+    downloadFile(blob, 'primordial-portfolio_media_assets.zip', 'application/zip');
   };
 
   const handleCreateNewAsset = (e: React.FormEvent) => {
@@ -240,7 +240,7 @@ export const AssetManagerModal: React.FC<AssetManagerModalProps> = ({
               </span>
             </div>
             <p className="text-xs text-zinc-400 mt-0.5">
-              Manage images, videos, and blueprints referenced across primordialvideo.netlify.app
+              Manage images, videos, and blueprints referenced across primordial-portfolio.netlify.app
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export const AssetManagerModal: React.FC<AssetManagerModalProps> = ({
             >
               <option value="relative">Relative Root (./filename.ext) — Standard Netlify Deploy</option>
               <option value="assets_folder">Subfolder (./assets/filename.ext) — Structured assets/</option>
-              <option value="netlify_live">Live Netlify CDN (https://primordialvideo.netlify.app/filename)</option>
+              <option value="netlify_live">Live Netlify CDN (https://primordial-portfolio.netlify.app/media/filename)</option>
               <option value="embedded">Self-Contained Inline (Embed uploaded Base64 in HTML)</option>
             </select>
           </div>
@@ -296,7 +296,7 @@ export const AssetManagerModal: React.FC<AssetManagerModalProps> = ({
               type="button"
               onClick={handleAutoLinkAllToNetlify}
               className="px-2.5 py-1 rounded bg-zinc-800 hover:bg-zinc-700 border border-zinc-700 text-sky-400 text-xs font-mono flex items-center gap-1.5 transition-colors"
-              title="Automatically connect all case studies to live primordialvideo.netlify.app assets"
+              title="Automatically connect all case studies to live primordial-portfolio.netlify.app assets"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Auto-Link All to Netlify CDN</span>
@@ -529,7 +529,7 @@ export const AssetManagerModal: React.FC<AssetManagerModalProps> = ({
             filteredAssets.map((asset) => {
               const hasData = Boolean(asset.dataUrl || asset.externalUrl);
               const isVideo = asset.fileType === 'video';
-              const resolvedPreview = asset.dataUrl || asset.externalUrl || `https://primordialvideo.netlify.app/${asset.filename}`;
+              const resolvedPreview = asset.dataUrl || asset.externalUrl || `https://primordial-portfolio.netlify.app/media/${asset.filename}`;
 
               return (
                 <div

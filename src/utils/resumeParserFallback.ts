@@ -468,7 +468,7 @@ export function parseResumeClientFallback(rawText: string): ParsedResumePayload 
 export const SAMPLE_TECHNICAL_RESUME = `BRICE ANTHONY MORNEAU
 Lead Video Engineer // Technical Director // Real-Time Visuals & Show Systems Specialist
 Pittsburgh, PA 15204 (Transit-Accessible & Tour-Ready • Hub: PIT)
-events.bricem@gmail.com • (412) 376-7138 • primordialvideo.netlify.app • linkedin.com/in/bricemorneau
+events.bricem@gmail.com • (412) 376-7138 • primordial-portfolio.netlify.app • linkedin.com/in/bricemorneau
 
 PROFESSIONAL SUMMARY
 Creative Technologist and Lead Video Systems Engineer with 10+ years architecting high-availability visual workflows for arena stadium concert tours, immersive projection spaces, and DJ Mag Top 100 venues worldwide. Deep expertise configuring disguise (d3) media servers, Resolume Arena 7 networks, Brompton SX40 LED processors, Barco E2 presentation switchers, grandMA3 lighting consoles, Pangolin BEYOND FB4 laser networks, and 3-phase 400A Cam-Lock power distribution. Valid U.S. Passport for global runs.
